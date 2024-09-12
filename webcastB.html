@@ -2,6 +2,7 @@
     templateType: email
     isAvailableForNewContent: true
 -->
+    
 <!doctype html>
 <html>
   <head>
@@ -20,7 +21,7 @@
     </style>
   </head>
 
-  <body>
+  <body style="background-color: #F1F1F1;">
     <!-- Preview text (text which appears right after subject in certain email clients) -->
     <div id="preview_text" style="display:none;">
       {% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}
@@ -35,9 +36,11 @@
     
     <!-- Insert body here -->
 
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="800px" style="; padding: 70px;">
+    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="800px" style="padding: 70px; background-color: #ffffff;">
       <tr>
-        logo
+        <td>
+          <img src="https://yourimageurl.com/logo.png" alt="Company Logo" style="display: block; border: 0; margin-bottom: 87px;" />
+        </td>
       </tr>
 
       <tr>
@@ -46,13 +49,13 @@
           <table width="100%" style="background-color: #A20067; padding-top: 66px; padding-left: 42px; padding-bottom: 44px; padding-right: 47px;"> 
             <!-- Heading -->
             <tr>
-              <td style="height: 212px;">
+              <td>
                 <p style="font-size:12px; color: #ffffff">TWOJE ZAPROSZENIE</p>
                 <p style="color: #ffffff;">WebCast:<br>Optymalnie korzystaj z cyfrowych list kontrolnych</p>
               </td>
 
               <td>
-                left image
+                <img src="https://yourimageurl.com/left_image.png" alt="Left Image" style="display: block; border: 0;" />
               </td>
             </tr>
 
@@ -70,6 +73,39 @@
                 <p style="font-size:15px; color: #ffffff">
                   2 lipca w naszym WebCaście dowiesz się: Jak optymalnie wykorzystać cyfrowe listy kontrolne i dlaczego są one istotną częścią nowoczesnych procesów pracy. WebCast oferuje kompleksowy wgląd w różnorodne zastosowania i zalety cyfrowych list kontrolnych w różnych obszarach i środowiskach pracy. Od dostępności danych w czasie rzeczywistym, poprzez dynamiczne wprowadzanie danych, po zmniejszoną podatność na błędy – cyfrowe listy kontrolne oferują liczne możliwości optymalizacji procesów pracy. Zarejestruj się teraz za darmo!
                 </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                ikona
+              </td>
+            </tr>
+
+            <!-- White bar -->
+            <tr>
+              <td>
+                <div style="border-bottom: 2px solid #ffffff; width: 299px;"></div>
+              </td>
+            </tr>
+
+            <!-- Date and time -->
+            <tr>
+              <td>
+                <p style="font-size: 18px; color: #ffffff">
+                  Czwartek
+                </p>
+  
+                <p style="font-size: 24px; color: #ffffff">
+                  02.06.2024 14:00-14:45
+                </p>
+              </td>
+            </tr>
+
+            <!-- White bar -->
+            <tr>
+              <td>
+                <div style="border-bottom: 2px solid #ffffff; width: 299px;"></div>
               </td>
             </tr>
           </table>
