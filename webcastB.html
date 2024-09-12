@@ -1,0 +1,103 @@
+<!--
+    templateType: email
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+
+    {% if content.meta_description %}
+      <meta name="description" content="{{ content.meta_description }}"/>
+    {% endif %}
+
+    <style type="text/css" id="hs-inline-css">
+      /*<![CDATA[*/
+      /* everything in this style tag will be inlined onto matching elements */
+      .sample-rule {
+      }
+      /*]]>*/
+    </style>
+  </head>
+
+  <body>
+    <!-- Preview text (text which appears right after subject in certain email clients) -->
+    <div id="preview_text" style="display:none;">
+      {% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}
+    </div>
+    <!-- View as webpage link -->
+
+    {% if content.create_page %}
+      <div>
+        Nie wyświetla się poprawnie? <a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">Wyświetl tego maila jako stronę internetową</a>.
+      </div>
+    {% endif %}
+    
+    <!-- Insert body here -->
+
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="800px" style="; padding: 70px;">
+      <tr>
+        logo
+      </tr>
+
+      <tr>
+        <td align="center">
+          <!-- 1st section box -->
+          <table width="100%" style="background-color: #A20067; padding-top: 66px; padding-left: 42px; padding-bottom: 44px; padding-right: 47px;"> 
+            <!-- Heading -->
+            <tr>
+              <td style="height: 212px;">
+                <p style="font-size:12px; color: #ffffff">TWOJE ZAPROSZENIE</p>
+                <p style="color: #ffffff;">WebCast:<br>Optymalnie korzystaj z cyfrowych list kontrolnych</p>
+              </td>
+
+              <td>
+                left image
+              </td>
+            </tr>
+
+            <!-- Body -->
+            <tr>
+              <td>
+                <p style="font-size:15px; color: #ffffff">
+                  Szanowni Państwo
+                </p>
+  
+                <p style="font-size:15px; color: #ffffff">
+                  Jakie są rodzaje cyfrowych list kontrolnych i jakie korzyści przynoszą? W jaki sposób firmy mogą skutecznie digitalizować swoje tradycyjne formularze i listy kontrolne? W jaki sposób można bezproblemowo zintegrować te cyfrowe listy kontrolne z istniejącymi systemami zarządzania usługami i aktywami?
+                </p>
+  
+                <p style="font-size:15px; color: #ffffff">
+                  2 lipca w naszym WebCaście dowiesz się: Jak optymalnie wykorzystać cyfrowe listy kontrolne i dlaczego są one istotną częścią nowoczesnych procesów pracy. WebCast oferuje kompleksowy wgląd w różnorodne zastosowania i zalety cyfrowych list kontrolnych w różnych obszarach i środowiskach pracy. Od dostępności danych w czasie rzeczywistym, poprzez dynamiczne wprowadzanie danych, po zmniejszoną podatność na błędy – cyfrowe listy kontrolne oferują liczne możliwości optymalizacji procesów pracy. Zarejestruj się teraz za darmo!
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+
+    {# {% module "module_17261339476889" path="@hubspot/email_body", label="Subheading" %} #}
+
+
+    <!-- Office location information and unsubscribe links -->
+    
+    
+    <p id="footer">
+      {{ site_settings.company_name }}&nbsp;
+      {{ site_settings.company_street_address_1 }}&nbsp;
+      {{ site_settings.company_street_address_2 }}&nbsp;
+      {{ site_settings.company_city }}&nbsp;
+      {{ site_settings.company_state }}&nbsp;
+      {{ site_settings.company_zip }}&nbsp;
+      {{ site_settings.company_country }}&nbsp;
+      <br/>
+      You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}.
+      <br/>
+      <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">Update your email preferences</a> to choose the types of emails you receive.
+      <br/>
+      <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">Unsubscribe from all future emails.</a>
+    </p>
+  </body>
+</html>
