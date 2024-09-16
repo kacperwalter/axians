@@ -2,6 +2,10 @@
     templateType: email
     isAvailableForNewContent: true
 -->
+
+{% set caption1 = "Jakie są rodzaje cyfrowych list kontrolnych i jakie korzyści przynoszą? W jaki sposób firmy mogą skutecznie digitalizować swoje tradycyjne formularze i listy kontrolne? W jaki sposób można bezproblemowo zintegrować te cyfrowe listy kontrolne z istniejącymi systemami zarządzania usługami i aktywami?" %}
+
+{% set caption2 = "2 lipca w naszym WebCaście dowiesz się: Jak optymalnie wykorzystać cyfrowe listy kontrolne i dlaczego są one istotną częścią nowoczesnych procesów pracy. WebCast oferuje kompleksowy wgląd w różnorodne zastosowania i zalety cyfrowych list kontrolnych w różnych obszarach i środowiskach pracy. Od dostępności danych w czasie rzeczywistym, poprzez dynamiczne wprowadzanie danych, po zmniejszoną podatność na błędy – cyfrowe listy kontrolne oferują liczne możliwości optymalizacji procesów pracy. Zarejestruj się teraz za darmo!" %}
     
 <!doctype html>
 <html>
@@ -89,7 +93,7 @@
               </td>
 
               <td>
-                <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/top-image.png" alt="Audience image" style="display: block; border: 0;" />
+                {% image "top_image", label="Top Image", src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/top-image.png", no_wrapper=True %}
               </td>
             </tr>
 
@@ -106,13 +110,9 @@
                   {% text "greeting" label="Greeting" value="Szanowni Państwo" no_wrapper=True %}
                 </p>
 
-                {% set caption1 = "Jakie są rodzaje cyfrowych list kontrolnych i jakie korzyści przynoszą? W jaki sposób firmy mogą skutecznie digitalizować swoje tradycyjne formularze i listy kontrolne? W jaki sposób można bezproblemowo zintegrować te cyfrowe listy kontrolne z istniejącymi systemami zarządzania usługami i aktywami?" %}
-  
                 <p style="font-size:15px; color: #ffffff; margin-left: 42px; margin-right: 42px;">
                   {% text "Caption-1" label="Caption 1" value={{caption1}} no_wrapper=True %}
                 </p>
-
-                {% set caption2 = "2 lipca w naszym WebCaście dowiesz się: Jak optymalnie wykorzystać cyfrowe listy kontrolne i dlaczego są one istotną częścią nowoczesnych procesów pracy. WebCast oferuje kompleksowy wgląd w różnorodne zastosowania i zalety cyfrowych list kontrolnych w różnych obszarach i środowiskach pracy. Od dostępności danych w czasie rzeczywistym, poprzez dynamiczne wprowadzanie danych, po zmniejszoną podatność na błędy – cyfrowe listy kontrolne oferują liczne możliwości optymalizacji procesów pracy. Zarejestruj się teraz za darmo!" %}
   
                 <p style="font-size:15px; color: #ffffff; margin-left: 42px; margin-right: 42px;">
                   {% text "Caption-2" label="Caption 2" value={{caption2}} no_wrapper=True %}
