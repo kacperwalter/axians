@@ -229,7 +229,7 @@
             <tr>
               <td>
                 <p style="color: #AE207A; font-size: 42px; margin-left: 24px; margin-top: 20px; margin-bottom: 15px;">
-                  Prelegenci
+                  {% text "section_3_heading" label="Section 3 heading" value="Prelegenci" no_wrapper=True %}
                 </p>
               </td>
             </tr>
@@ -302,14 +302,11 @@
               <tr>
                 <td style="padding-bottom: 20px;">
                   <p style="color: #A20067; font-size: 42px; margin: 0;">
-                    Dla kogo?
+                    {% text "section_3_heading" label="Section 3 heading" value="Dla kogo?" no_wrapper=True %}
                   </p>
                   
-                  <ul >
-                    <li><p style="font-size: 15px; margin-top: 0px; margin-bottom: 0px;">Kierownik Działu Obsługi Klienta / Kierownik Utrzymania Ruchu</p></li>
-                    <li><p style="font-size: 15px; margin-top: 0px; margin-bottom: 0px;">Lider zespołu / planowanie zamówień / brygadzista</p></li>
-                    <li><p style="font-size: 15px; margin-top: 0px; margin-bottom: 0px;">Przetwarzanie zamówień właściciela procesu</p></li>
-                    <li><p style="font-size: 15px; margin-top: 0px; margin-bottom: 0px;">Moduł odpowiedzialny za obsługę SAP PM, SAP CS, SAP PS, SAP S4HANA</p></li>
+                  <ul>
+                    {% rich_text "section_3_list", label="Section 3 list", no_wrapper=True, value="" %}
                   </ul>
                 </td>
               </tr>
@@ -335,16 +332,16 @@
 
                 <td align="center" style="width: 60%;">
                   <p style="color: #A20067; font-size: 42px; text-align: center; margin-top: 0px; margin-bottom: 30px;">
-                    Liczymy na <br> Państwa udział!
+                    {% text "cta_heading" label="CTA heading" value="Liczymy na <br> Państwa udział!" no_wrapper=True %}
                   </p>
 
                   <!-- Button -->
-                  <a href="#">
-                    <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/button-2.png" alt="Zapisz się button" style="display: block; border: 0; margin-bottom: 35px;" />
+                  <a href="{% text "button_sign_in_link" label="Sign in link" value="#" no_wrapper=True %}">
+                    {% image "button_sign_in_image", label="Sign in button", src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/button-2.png", no_wrapper=True %}
                   </a>
 
                   <p style="font-size: 15px; text-align: center;">
-                    Axians NEO Solutions & Technology Team
+                  {% text "cta_summary" label="CTA Summary" value="Axians NEO Solutions & Technology Team" no_wrapper=True %}
                   </p>
                 </td>
 
@@ -372,7 +369,7 @@
               <tr>
                 <td>
                   <p style="text-align: center; color: #6D6D6D; font-size: 12px; margin-bottom: 90px;">
-                    <strong>Axians IT Solutions Poland Sp. z o.o.</strong> z siedzibą w Warszawie, adres: ul. Postępu 21D, 02-676 Warszawa, Sąd Rejonowy dla m.st. Warszawy XIII Wydział Gospodarczy | KRS 0000100284 | NIP 5260306885 | Kapitał Zakładowy 13 487 000,00 PLN | nr BDO 000002589
+                  {% text "additional_text" label="Additional Text" value="<strong>Axians IT Solutions Poland Sp. z o.o.</strong> z siedzibą w Warszawie, adres: ul. Postępu 21D, 02-676 Warszawa, Sąd Rejonowy dla m.st. Warszawy XIII Wydział Gospodarczy | KRS 0000100284 | NIP 5260306885 | Kapitał Zakładowy 13 487 000,00 PLN | nr BDO 000002589" no_wrapper=True %}
                   </p>
                 </td>
               </tr>
