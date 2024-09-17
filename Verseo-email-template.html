@@ -170,61 +170,29 @@
         <tr>
           <td>
             <p style="color: #AE207A; font-size: 42px; margin-left: 24px; margin-top: 20px; margin-bottom: 15px;">
-              Prelegenci
+              {{ module.section_3.heading }}
             </p>
           </td>
         </tr>
 
-        <!-- Person 1 -->
-        <tr>
-          <td>
-            <table border="0" cellpadding="0" cellspacing="0">
-              <tr>
-                <td style="padding-left: 24px; padding-bottom: 20px;">
-                  <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/christina.png" alt="Person image" style="display: block; border: 0;" />
-                </td>
-                <td style="padding-left: 35px;">
-                  <p style="color: #A20067; font-size: 24px; margin-top: 0; margin-bottom: 10px;">Christina-Alexandra Hugger</p>
-                  <p style="color: #005EB8; font-size: 15px; margin-top: 0; margin-bottom: 0;">SAP Consultant <br> Axians NEO Solutions & Technology</p>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-
-        <!-- Person 2 -->
-        <tr>
-          <td>
-            <table border="0" cellpadding="0" cellspacing="0">
-              <tr>
-                <td style="padding-left: 24px; padding-bottom: 20px;">
-                  <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/jan.png" alt="Person image" style="display: block; border: 0;" />
-                </td>
-                <td style="padding-left: 35px;">
-                  <p style="color: #A20067; font-size: 24px; margin-top: 0; margin-bottom: 10px;">Jan Kowalski</p>
-                  <p style="color: #005EB8; font-size: 15px; margin-top: 0; margin-bottom: 0;">SAP Consultant <br> Axians NEO Solutions & Technology</p>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-
-        <!-- Person 3 -->
-        <tr>
-          <td>
-            <table border="0" cellpadding="0" cellspacing="0">
-              <tr>
-                <td style="padding-left: 24px; padding-bottom: 20px;">
-                  <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/agnieszka.png" alt="Person image" style="display: block; border: 0;" />
-                </td>
-                <td style="padding-left: 35px;">
-                  <p style="color: #A20067; font-size: 24px; margin-top: 0; margin-bottom: 10px;">Agnieszka Wolska</p>
-                  <p style="color: #005EB8; font-size: 15px; margin-top: 0; margin-bottom: 0;">SAP Consultant <br> Axians NEO Solutions & Technology</p>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
+        <!-- Speakers -->
+        {% for speaker in module.section_3.speakers %}
+          <tr>
+            <td>
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding-left: 24px; padding-bottom: 20px;">
+                    <img src="{{ speaker.avatar.src }}" alt="{{ speaker.avatar.alt }}" style="display: block; border: 0;" />
+                  </td>
+                  <td style="padding-left: 35px;">
+                    <p style="color: #A20067; font-size: 24px; margin-top: 0; margin-bottom: 10px;">{{ speaker.name_and_surname }}</p>
+                    <p style="color: #005EB8; font-size: 15px; margin-top: 0; margin-bottom: 0;">{{ speaker.position }} <br> {{ speaker.company }}</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        {% endfor %}
       </table>
     </td>
     </tr>
