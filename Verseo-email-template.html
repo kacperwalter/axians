@@ -18,12 +18,14 @@
         <!-- Heading -->
         <tr>
           <td>
-            <p style="font-size:12px; color: #ffffff; margin-top: 0px; margin-bottom: 0px; margin-left: 42px; margin-top: 47px;">TWOJE ZAPROSZENIE</p>
+            <p style="font-size:12px; color: #ffffff; margin-top: 0px; margin-bottom: 0px; margin-left: 42px; margin-top: 47px;">
+              {{ module.section_1.subheading }}
+            </p>
             <p style="color: #ffffff; font-size: 42px; margin-top: 0px; margin-bottom: 0px; margin-left: 42px;">WebCast:<br>Optymalnie korzystaj z cyfrowych list kontrolnych</p>
           </td>
 
           <td valign="top">
-            <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/top-image.png" alt="Audience image" style="display: block; border: 0;" />
+            <img src="{{ module.section_1.top_image.src }}" alt="{{ module.section_1.top_image.alt }}" style="display: block; border: 0;" />
           </td>
         </tr>
 
