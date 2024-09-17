@@ -80,11 +80,11 @@
         <tr>
           <td>
             <p style="font-size: 18px; color: #ffffff; margin-left: 42px; margin-top: 0px; margin-bottom: 0px;">
-              Czwartek
+              {{ module.section_1.day }}, {{ module.section_1.place }} <br> {{ module.section_1.adress }}
             </p>
 
             <p style="font-size: 24px; color: #ffffff; margin-left: 42px; margin-top: 0px; margin-bottom: 10px;">
-              02.06.2024 14:00-14:45
+              {{ module.section_1.date_and_time }}
             </p>
           </td>
         </tr>
@@ -108,7 +108,7 @@
           <tr>
           <td>
             <p style="margin-left: 42px; margin-top: 0px; margin-bottom: 44px;">
-              <a href="#">
+              <a href="{{ module.section_1.sign_in_url }}">
                 <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/button-1.jpg" alt="Zapisz się button" style="display: block; border: 0;" />
               </a>
             </p>
