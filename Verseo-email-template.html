@@ -206,19 +206,22 @@
 
     <!-- 4th section box -->
     <tr>
-      <td align="center">
+      <td align="left">
         <table  border="0" cellpadding="0" cellspacing="0">
           <tr>
             <td style="padding-bottom: 20px;">
-              <p style="color: #A20067; font-size: 42px; margin: 0;">
-                Dla kogo?
+              <p style="color: #A20067; font-size: 42px; margin: 0; margin-left: 24px;">
+                {{ module.section_4.heading }}
               </p>
               
-              <ul >
-                <li><p style="font-size: 15px; margin-top: 0px; margin-bottom: 0px;">Kierownik Działu Obsługi Klienta / Kierownik Utrzymania Ruchu</p></li>
-                <li><p style="font-size: 15px; margin-top: 0px; margin-bottom: 0px;">Lider zespołu / planowanie zamówień / brygadzista</p></li>
-                <li><p style="font-size: 15px; margin-top: 0px; margin-bottom: 0px;">Przetwarzanie zamówień właściciela procesu</p></li>
-                <li><p style="font-size: 15px; margin-top: 0px; margin-bottom: 0px;">Moduł odpowiedzialny za obsługę SAP PM, SAP CS, SAP PS, SAP S4HANA</p></li>
+              <ul>
+                {% for bulletpoint in module.section_2.bulletpoints %}
+                  <li style="margin-left: 24px;">
+                    <p style="font-size: 15px; margin-top: 0px; margin-bottom: 0px;">
+                      {{ bulletpoint}}
+                    </p>
+                  </li>
+                {% endfor %}
               </ul>
             </td>
           </tr>
@@ -244,16 +247,16 @@
 
             <td align="center" style="width: 60%;">
               <p style="color: #A20067; font-size: 42px; text-align: center; margin-top: 0px; margin-bottom: 30px;">
-                Liczymy na <br> Państwa udział!
+                {{ module.section_5.heading }}
               </p>
 
               <!-- Button -->
-              <a href="#">
+              <a href="{{ module.section.button_url }}">
                 <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/button-2.png" alt="Zapisz się button" style="display: block; border: 0; margin-bottom: 35px;" />
               </a>
 
               <p style="font-size: 15px; text-align: center;">
-                Axians NEO Solutions & Technology Team
+                {{ module.section_5.caption }}
               </p>
             </td>
 
@@ -281,7 +284,7 @@
           <tr>
             <td>
               <p style="text-align: center; color: #6D6D6D; font-size: 12px; margin-bottom: 90px;">
-                <strong>Axians IT Solutions Poland Sp. z o.o.</strong> z siedzibą w Warszawie, adres: ul. Postępu 21D, 02-676 Warszawa, Sąd Rejonowy dla m.st. Warszawy XIII Wydział Gospodarczy | KRS 0000100284 | NIP 5260306885 | Kapitał Zakładowy 13 487 000,00 PLN | nr BDO 000002589
+                {{ module.bottom_caption }}
               </p>
             </td>
           </tr>
