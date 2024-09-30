@@ -1,0 +1,40 @@
+<!-- Outer Wrapper with Padding -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;">
+  <tr>
+    <td align="center" style="padding: 10px 20px;">
+      
+      <!-- Section 3 Box -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F5F5F5;">
+        <tr>
+          <td>
+            <p style="color: #AE207A; font-size: 42px; margin: 20px 24px 15px 24px;">
+              {{ module.heading }}
+            </p>
+          </td>
+        </tr>
+
+        <!-- Speakers -->
+        {% for speaker in module.speakers %}
+          <tr>
+            <td>
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding-left: 24px; padding-bottom: 20px;">
+                    <img src="{{ speaker.avatar.src }}" alt="{{ speaker.avatar.alt }}" style="display: block; border: 0; width: 120px; height: 120px;" />
+                  </td>
+                  <td style="padding-left: 35px;">
+                    <p style="color: #A20067; font-size: 24px; margin: 0 0 10px 0;">{{ speaker.name_and_surname }}</p>
+                    <p style="color: #005EB8; font-size: 15px; margin: 0;">
+                      {{ speaker.position }} <br> {{ speaker.company }}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+
+    </td>
+  </tr>
+</table>

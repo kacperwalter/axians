@@ -1,0 +1,29 @@
+<!-- Outer Wrapper with Padding -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;">
+  <tr>
+    <td align="center" style="padding: 10px 20px;">
+      
+      <!-- Section 4 Box -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;">
+        <tr>
+          <td style="padding-bottom: 20px;">
+            <p style="color: #A20067; font-size: 42px; margin: 0 24px 20px 24px;">
+              {{ module.heading }}
+            </p>
+
+            <ul style="list-style-type: disc; padding-left: 24px;">
+              {% for bulletpoint in module.bulletpoints %}
+                <li style="margin-left: 0;">
+                  <p style="font-size: 15px; margin: 0;">
+                    {{ bulletpoint }}
+                  </p>
+                </li>
+              {% endfor %}
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
