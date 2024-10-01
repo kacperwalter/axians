@@ -19,9 +19,8 @@
             <ul style="list-style-type: disc; color: #ffffff; padding-left: 40px; margin: 10px 15px 0 10px;">
               {% for bulletpoint in module.bulletpoints %}
                 <li style="margin-left: 10px;">
-                  <p style="font-size: 15px; color: #ffffff; margin: 0;">
-                    {{ bulletpoint }}
-                  </p>
+                  {% set styled_bulletpoint = bulletpoint|replace('<p', '<p style="font-size: 15px; color: #ffffff; margin: 0;"') %}
+                  {{ styled_bulletpoint|safe }}
                 </li>
               {% endfor %}
             </ul>
