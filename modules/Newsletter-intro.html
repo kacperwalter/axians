@@ -12,9 +12,9 @@
               {{ module.subheading }}
             </p>
 
-            <p style="color: #ffffff; font-size: 42px; margin: 0 0 0 42px;">
-              {{ module.heading }}
-            </p>
+            {# This way we impelemnt styled Rich Text #}
+            {% set styled_heading = module.heading|replace('<p', '<p style="color: #ffffff; font-size: 42px; margin: 0 0 0 42px;"') %}
+            {{ styled_heading|safe }}
           </td>
 
           <td valign="top" align="right">
@@ -30,9 +30,8 @@
         <!-- Body -->
         <tr>
           <td colspan="2">
-            <p style="font-size:15px; color: #ffffff; margin: 0 42px;">
-              {{ module.caption }}
-            </p>
+            {% set styled_caption = module.caption|replace('<p', '<p style="font-size:15px; color: #ffffff; margin: 0 42px;"') %}
+            {{ styled_caption|safe }}
           </td>
         </tr>
 
