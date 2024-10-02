@@ -75,8 +75,15 @@
           </td>
         </tr>
 
-        <!-- White Bar -->
-        <tr>
+        {% if !module.is_button_displayed %}
+          <tr>
+            <td colspan="2" height="20" style="font-size: 0; line-height: 0; background-color: #A20067;"></td>
+          </tr>
+        {% endif %}
+
+        {% if module.is_button_displayed %}
+          <!-- White Bar -->
+          <tr>
           <td>
             <p style="margin-left: 42px;">
               <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/white-bar.png" alt="White line separator" style="display: block; border: 0; margin-bottom: 10px;" />
@@ -94,11 +101,12 @@
           <td>
             <p style="margin-left: 42px; margin-bottom: 44px;">
               <a href="{{ module.sign_in_url }}">
-                <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/button-1.jpg" alt="Zapisz się button" style="display: block; border: 0;" />
+                <img src="{{ module.button.src }}" alt="{{ module.button.alt }}" style="display: block; border: 0;" />
               </a>
             </p>
           </td>
         </tr>
+        {% endif %}
       </table>
 
     </td>
