@@ -1,0 +1,39 @@
+.cta {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  
+  .wrapper {
+    background: #092552; // fallback
+    background: linear-gradient(90deg, #092552 0%, #114A86 62.5%);
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  &__heading {
+    font-weight: normal;
+    font-size: 32px;
+    font-weight: 300;
+  }
+
+  &__caption {
+    font-weight: 200;
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    color: white;
+    text-decoration: none;
+    background-color: #B53385;
+    padding: 15px 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #9a2c72;
+      color: #f0f0f0;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
