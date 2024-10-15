@@ -1,0 +1,88 @@
+<!-- Outer Wrapper with Padding -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;">
+  <tr>
+    <td align="center" style="padding: 10px 20px;">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;"> 
+        <!-- Heading -->
+        <tr>
+          <td>
+            <p style="font-size:12px; color: #005EB8; font-weight: bold;">
+              {{ module.subheading }}
+            </p>
+
+            {% set styled_heading = module.heading|replace('<p', '<p style="color: #A20067; font-size: 42px; margin-bottom: 20px;"') %}
+            {{ styled_heading|safe }}
+          </td>
+
+          <td valign="top" align="right">
+            <img src="{{ module.top_image.src }}" alt="{{ module.top_image.alt }}" style="display: block; border: 0; max-width: 205px" />
+          </td>
+        </tr>
+
+        <!-- Two column body -->
+        <tr>
+          <!-- Caption -->
+          <td colspan="1">
+            {% set styled_caption = module.caption|replace('<p', '<p style="font-size:15px; color: #000000;"') %}
+            {{ styled_caption|safe }}
+          </td>
+              
+          <!-- Signup box -->
+          <td colspan="1" valign="top">
+            <table border="0" cellpadding="0" cellspacing="0" style="background-color: #A20067; width: 205px;">
+              <tr>
+                <td>
+                  <p style="margin: 28px 0 16px 28px">
+                    <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/icon.png" alt="Calendar icon" style="display: block; border: 0;" />
+                  </p>
+                </td>
+              </tr>
+
+               <!-- White Bar -->
+              <tr>
+                <td>
+                  <p style="margin: 0 28px 0 28px;">
+                    <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/white-bar-small.png" alt="White line separator" style="display: block; border: 0; margin-bottom: 10px;" />
+                  </p>
+                </td>
+              </tr>
+
+              <!-- Date and Time -->
+              <tr>
+                <td>
+                  <p style="font-size: 18px; color: #ffffff; margin: 0 0 0 28px;">
+                    {{ module.day }}
+                  </p>
+
+                  <p style="font-size: 24px; color: #ffffff; margin: 0 0 {{ !module.is_button_displayed ? '28px' : '0' }} 28px;">
+                    {{ module.date }} <br> {{ module.time }}
+                  </p>
+                </td>
+              </tr>
+
+              {% if module.is_button_displayed %}
+                <tr>
+                  <td>
+                    <p style="margin: 0 28px 0 28px;">
+                      <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/white-bar-small.png" alt="White line separator" style="display: block; border: 0; margin: 10px 0 10px 0" />
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <p style="margin-bottom: 10px; margin: 0 0 29px 28px">
+                      <a href="{{ module.sign_in_url }}">
+                        <img src="{{ module.button.src }}" alt="{{ module.button.alt }}" style="display: block; border: 0;" />
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+              {% endif %}
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
