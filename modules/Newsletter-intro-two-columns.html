@@ -10,7 +10,7 @@
               {{ module.subheading }}
             </p>
 
-            {% set styled_heading = module.heading|replace('<p', '<p style="color: #A20067; font-size: 42px; margin-bottom: 20px;"') %}
+            {% set styled_heading = module.heading|replace('<p', '<p style="color: #A20067; font-size: 38px; margin-bottom: 0px;"') %}
             {{ styled_heading|safe }}
           </td>
 
@@ -22,14 +22,18 @@
         <!-- Two column body -->
         <tr>
           <!-- Caption -->
-          <td colspan="1">
-            {% set styled_caption = module.caption|replace('<p', '<p style="font-size:15px; color: #000000;"') %}
+          <td colspan="1" style="padding-right: 20px;"> 
+            {% set styled_caption = module.caption|replace('<p', '<p style="font-size:13px; color: #000000;"') %}
             {{ styled_caption|safe }}
           </td>
               
           <!-- Signup box -->
           <td colspan="1" valign="top">
-            <table border="0" cellpadding="0" cellspacing="0" style="background-color: #A20067; width: 205px;">
+            <table border="0" cellpadding="0" cellspacing="0" style="background-color: #A20067; margin-bottom: 40px;">
+              <tr>
+                <td colspan="2" height="20" style="font-size: 0; line-height: 0; background-color: #ffffff;"></td>
+              </tr>
+
               <tr>
                 <td>
                   <p style="margin: 28px 0 16px 28px">
@@ -38,13 +42,18 @@
                 </td>
               </tr>
 
-               <!-- White Bar -->
+              <!-- White Bar -->
               <tr>
                 <td>
                   <p style="margin: 0 28px 0 28px;">
-                    <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/white-bar-small.png" alt="White line separator" style="display: block; border: 0; margin-bottom: 10px;" />
+                    <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/white-bar-small.png" alt="White line separator" style="display: block; border: 0;" />
                   </p>
                 </td>
+              </tr>
+
+              <!-- Spacer -->
+              <tr>
+                <td colspan="2" height="20" style="font-size: 0; line-height: 0; background-color: #A20067;"></td>
               </tr>
 
               <!-- Date and Time -->
@@ -64,9 +73,14 @@
                 <tr>
                   <td>
                     <p style="margin: 0 28px 0 28px;">
-                      <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/white-bar-small.png" alt="White line separator" style="display: block; border: 0; margin: 10px 0 10px 0" />
+                      <img src="https://143724670.fs1.hubspotusercontent-eu1.net/hubfs/143724670/verseo-newsletter/white-bar-small.png" alt="White line separator" style="display: block; border: 0; margin: 20px 0 10px 0" />
                     </p>
                   </td>
+                </tr>
+
+               <!-- Spacer -->
+                <tr>
+                  <td colspan="2" height="20" style="font-size: 0; line-height: 0; background-color: #A20067;"></td>
                 </tr>
 
                 <tr>
