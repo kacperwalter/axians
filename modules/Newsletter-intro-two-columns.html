@@ -10,7 +10,7 @@
               {{ module.subheading }}
             </p>
 
-            {% set styled_heading = module.heading|replace('<p', '<p style="color: #A20067; font-size: 38px; margin-bottom: 0px;"') %}
+            {% set styled_heading = module.heading|replace('<p', '<p style="color: #A20067; font-size: 42px; margin-bottom: 0px;"') %}
             {{ styled_heading|safe }}
           </td>
 
@@ -23,7 +23,7 @@
         <tr>
           <!-- Caption -->
           <td colspan="1" style="padding-right: 20px;"> 
-            {% set styled_caption = module.caption|replace('<p', '<p style="font-size:13px; color: #000000;"') %}
+            {% set styled_caption = module.caption|replace('<p', '<p style="font-size:15px; color: #000000;"') %}
             {{ styled_caption|safe }}
           </td>
               
