@@ -1,0 +1,11 @@
+<section class="cover-showcase">
+  <div class="cover-showcase__wrapper">
+    <!-- <img src="{{ }}" alt=""> -->
+    {{ module.cover|pprint }}
+    {{ module.heading }}
+     
+    {% for feature in module.features %}
+      {{ feature }}
+    {% endfor %}
+  </div>
+</section>

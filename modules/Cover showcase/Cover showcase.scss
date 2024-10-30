@@ -1,0 +1,10 @@
+.cover-showcase {
+  background-color: var(--color-gray);
+
+  &__wrapper {
+    max-width: 144rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+  }
+}
