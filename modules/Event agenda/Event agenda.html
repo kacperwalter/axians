@@ -15,19 +15,19 @@
           
           <div class="event-agenda__event-list">
             {% for time_span in day.first_room.time_spans %}
-              <div class="time-span">
-                <div class="time-span__time-and-name">
+              <div class="agenda-item">
+                <div class="agenda-item__time-and-name">
                   <h5>{{ time_span.time }}</h5>
                   <p>{{ time_span.event_name }}</p>
-
-                  <ul class="time-span__event-points">
-                    {% for event_point in time_span.event_points %}
-                      <li class="time-span__event-point">
-                        {{ event_point }}
-                      </li>
-                    {% endfor %}
-                  </ul>
                 </div>
+
+                <ul class="agenda-item__event-points">
+                  {% for event_point in time_span.event_points %}
+                    <li class="agenda-item__event-point">
+                      {{ event_point }}
+                    </li>
+                  {% endfor %}
+                </ul>
               </div>        
             {% endfor %}
           </div>
