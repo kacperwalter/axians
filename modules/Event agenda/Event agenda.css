@@ -1,0 +1,15 @@
+.event-agenda {
+  display: grid;
+  place-content: center;
+}
+.event-agenda h2 {
+  text-align: center;
+  color: var(--color-blue);
+  font-size: 2.8rem;
+}
+.event-agenda__wrapper {
+  max-width: 85rem;
+}
+.event-agenda__wrapper--wide {
+  max-width: 110rem;
+}/*# sourceMappingURL=Event agenda.css.map */
