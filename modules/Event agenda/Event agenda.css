@@ -35,9 +35,13 @@
 .agenda-item__time-and-name h5 {
   font-size: 2rem;
   color: var(--color-blue);
+  margin-bottom: 0;
 }
 .agenda-item__time-and-name p {
   font-size: 1.4rem;
+}
+.agenda-item__event-points {
+  padding: 1rem 2rem 0rem 0rem;
 }
 .agenda-item__event-point {
   margin: 0;
