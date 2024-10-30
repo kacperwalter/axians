@@ -10,11 +10,7 @@
   }
 
   &__wrapper {
-    max-width: 85rem;
-
-    &--wide {
-      max-width: 110rem;
-    }
+    max-width: 100rem;
   }
 
   &__day {
@@ -28,6 +24,18 @@
       width: 100%;
       border-bottom: 2px solid var(--color-brand);
     }
+  }
+
+  &__event-listing {
+    margin-top: 3rem;
+  }
+
+  &__room-name {
+    text-transform: uppercase;
+    color: var(--color-blue);
+    font-size: 2.3rem;
+    width: 100%;
+    border-bottom: 2px solid var(--color-blue);
   }
 }
 

@@ -3,14 +3,14 @@
     {{ module.heading }}
   </h2>
 
-  <div class="event-agenda__wrapper {{ module.days.two_rooms ? 'event-agenda__wrapper--wide' : '' }}">
+  <div class="event-agenda__wrapper">
     {% for day in module.days %}
       <div class="event-agenda__day">
         <h3>{{ day.date }}</h3>
 
         <div class="event-agenda__event-listing {{ day.two_rooms ? 'event-agenda__event-listing--two-columns' : '' }}">
           {% if day.two_rooms %}
-            <h4>{{ day.first_room.room_name }}</h4>
+            <h4 class="event-agenda__room-name">{{ day.first_room.room_name }}</h4>
           {% endif %}
           
           <div class="event-agenda__event-list">
