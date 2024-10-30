@@ -9,28 +9,55 @@
         <h3>{{ day.date }}</h3>
 
         <div class="event-agenda__event-listing {{ day.two_rooms ? 'event-agenda__event-listing--two-columns' : '' }}">
-          {% if day.two_rooms %}
-            <h4 class="event-agenda__room-name">{{ day.first_room.room_name }}</h4>
-          {% endif %}
-          
-          <div class="event-agenda__event-list">
-            {% for time_span in day.first_room.time_spans %}
-              <div class="agenda-item">
-                <div class="agenda-item__time-and-name">
-                  <h5>{{ time_span.time }}</h5>
-                  <p>{{ time_span.event_name }}</p>
-                </div>
+          <div class="event-agenda__room">
+            {% if day.two_rooms %}
+              <h4 class="event-agenda__room-name">{{ day.first_room.room_name }}</h4>
+            {% endif %}
+            
+            <div class="event-agenda__event-list">
+              {% for time_span in day.first_room.time_spans %}
+                <div class="agenda-item">
+                  <div class="agenda-item__time-and-name">
+                    <h5>{{ time_span.time }}</h5>
+                    <p>{{ time_span.event_name }}</p>
+                  </div>
 
-                <ul class="agenda-item__event-points">
-                  {% for event_point in time_span.event_points %}
-                    <li class="agenda-item__event-point">
-                      {{ event_point }}
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>        
-            {% endfor %}
+                  <ul class="agenda-item__event-points">
+                    {% for event_point in time_span.event_points %}
+                      <li class="agenda-item__event-point">
+                        {{ event_point }}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>        
+              {% endfor %}
+            </div>
           </div>
+
+          {% if day.two_rooms %}
+            <div class="event-agenda__room">
+              <h4 class="event-agenda__room-name">{{ day.second_room.room_name }}</h4>
+
+              <div class="event-agenda__event-list">
+                {% for time_span in day.second_room.time_spans %}
+                  <div class="agenda-item">
+                    <div class="agenda-item__time-and-name">
+                      <h5>{{ time_span.time }}</h5>
+                      <p>{{ time_span.event_name }}</p>
+                    </div>
+
+                    <ul class="agenda-item__event-points">
+                      {% for event_point in time_span.event_points %}
+                        <li class="agenda-item__event-point">
+                          {{ event_point }}
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>      
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
         </div>
       </div>
     {% endfor %}
