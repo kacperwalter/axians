@@ -1,3 +1,44 @@
 .event-invitation {
-  
+  position: relative;
+  display: grid;
+  place-content: center;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    max-height: 40rem;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &__main {
+    max-width: 106rem;
+    z-index: 10;
+    background-color: white;
+    margin-top: 24rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 5rem;
+    padding: 5rem 10rem;
+  }
+
+  &__heading {
+    p {
+      color: var(--color-brand);
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      color: var(--color-blue);
+    }
+  }
+
+  &__caption {
+    font-size: 2rem;
+  }
+
+  &__time-place {
+    grid-column: 2;
+  }
 }

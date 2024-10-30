@@ -1,0 +1,37 @@
+.event-invitation {
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.event-invitation__background {
+  position: absolute;
+  top: 0;
+  max-height: 40rem;
+  width: 100%;
+  z-index: 0;
+}
+.event-invitation__main {
+  max-width: 106rem;
+  z-index: 10;
+  background-color: white;
+  margin-top: 24rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+  padding: 5rem 10rem;
+}
+.event-invitation__heading p {
+  color: var(--color-brand);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.event-invitation__heading h1 {
+  color: var(--color-blue);
+}
+.event-invitation__caption {
+  font-size: 2rem;
+}
+.event-invitation__time-place {
+  grid-column: 2;
+}/*# sourceMappingURL=Event invitation.css.map */
