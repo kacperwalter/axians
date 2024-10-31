@@ -1,0 +1,56 @@
+.event-logo-wall {
+  display: grid;
+  place-content: center;
+  margin-bottom: 10rem;
+}
+@media (max-width: 1100px) {
+  .event-logo-wall {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (max-width: 500px) {
+  .event-logo-wall {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.event-logo-wall__wrapper {
+  width: 100%;
+  max-width: 110rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 850px) {
+  .event-logo-wall__wrapper {
+    grid-template-columns: 1fr;
+    place-content: center;
+  }
+}
+@media (min-width: 1100px) {
+  .event-logo-wall__wrapper {
+    min-width: 110rem;
+  }
+}
+.event-logo-wall__heading {
+  font-size: 3.2rem;
+}
+@media (max-width: 850px) {
+  .event-logo-wall__heading {
+    text-align: center;
+  }
+}
+.event-logo-wall__logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 850px) {
+  .event-logo-wall__logos {
+    justify-content: center;
+  }
+}
+.event-logo-wall__logo {
+  max-width: 15rem;
+}/*# sourceMappingURL=Event logo wall.css.map */

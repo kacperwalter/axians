@@ -1,0 +1,13 @@
+<section class="event-logo-wall">
+  <div class="event-logo-wall__wrapper">
+    <h2 class="event-logo-wall__heading">
+      {{ module.heading }}
+    </h2>
+
+    <div class="event-logo-wall__logos">
+      {% for logo in module.logos %}
+        <img src="{{ logo.src }}" alt="{{ logo.alt }}" class="event-logo-wall__logo">
+      {% endfor %}
+    </div>
+  </div>
+</section>
