@@ -22,16 +22,20 @@
     column-gap: 5rem;
     padding: 5rem 5rem 5rem 10rem;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 900px) {
       margin-left: 5rem;
       margin-right: 5rem;
       margin-top: 10rem;
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+      padding: 5rem;
     }
 
     @media (max-width: 500px) {
       margin-left: 3rem;
       margin-right: 3rem;
       margin-top: 5rem;
+      padding: 3rem;
     }
   }
 
@@ -56,13 +60,33 @@
   &__time-place {
     grid-column: 2;
 
+    @media (max-width: 900px) {
+      grid-column: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      row-gap: 1.5rem;
+    }
+
     .icon-box {
       &:first-child {
         padding: 2rem 3rem 0rem 3rem;
 
+        @media (max-width: 900px) {
+          padding: 0;
+        }
+
         & .icon-box__content {
           border-bottom: 2px solid var(--color-blue);
           padding-bottom: 2rem;
+
+          @media (max-width: 900px) {
+            border-bottom: none;
+            padding: 0;
+          }
         }
       }
     }
@@ -80,6 +104,10 @@
   align-items: flex-start;
   gap: 2rem;
   padding: 2rem 3rem;
+
+  @media (max-width: 900px) {
+    padding: 0;
+  }
 
   &__content {
     width: 100%;
