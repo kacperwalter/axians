@@ -87,6 +87,12 @@
     padding: 0;
   }
 }
+@media (max-width: 500px) {
+  .event-invitation__time-place .icon-box:first-child .icon-box__content {
+    border-bottom: 2px solid var(--color-blue);
+    padding-bottom: 2rem;
+  }
+}
 .event-invitation__buttons {
   display: flex;
   flex-direction: column;

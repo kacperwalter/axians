@@ -87,6 +87,11 @@
             border-bottom: none;
             padding: 0;
           }
+
+          @media (max-width: 500px) {
+            border-bottom: 2px solid var(--color-blue);
+            padding-bottom: 2rem;
+          }
         }
       }
     }
