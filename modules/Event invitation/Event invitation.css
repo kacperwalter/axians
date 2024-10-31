@@ -12,7 +12,7 @@
   z-index: 0;
 }
 .event-invitation__main {
-  max-width: 106rem;
+  max-width: 100rem;
   z-index: 10;
   background-color: white;
   margin-top: 24rem;
@@ -21,6 +21,20 @@
   -moz-column-gap: 5rem;
        column-gap: 5rem;
   padding: 5rem 5rem 5rem 10rem;
+}
+@media (max-width: 1024px) {
+  .event-invitation__main {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 10rem;
+  }
+}
+@media (max-width: 500px) {
+  .event-invitation__main {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 5rem;
+  }
 }
 .event-invitation__heading p {
   color: var(--color-brand);
