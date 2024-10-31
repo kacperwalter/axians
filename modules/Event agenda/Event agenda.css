@@ -3,6 +3,18 @@
   place-content: center;
   margin-bottom: 10rem;
 }
+@media (max-width: 1024px) {
+  .event-agenda {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (max-width: 500px) {
+  .event-agenda {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
 .event-agenda h2 {
   text-align: center;
   color: var(--color-blue);
@@ -29,10 +41,15 @@
   -moz-column-gap: 3rem;
        column-gap: 3rem;
 }
+@media (max-width: 750px) {
+  .event-agenda__event-listing--two-columns {
+    grid-template-columns: 1fr;
+  }
+}
 .event-agenda__room-name {
   text-transform: uppercase;
   color: var(--color-blue);
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   width: 100%;
   border-bottom: 2px solid var(--color-blue);
 }
@@ -43,6 +60,11 @@
   padding: 2rem 1rem;
   -moz-column-gap: 3rem;
        column-gap: 3rem;
+}
+@media (max-width: 600px) {
+  .agenda-item {
+    grid-template-columns: 1fr;
+  }
 }
 .agenda-item:not(:last-child) {
   border-bottom: 1px solid var(--color-gray);
