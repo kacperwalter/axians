@@ -1,0 +1,20 @@
+.button {
+  padding: 1.2rem 3.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #AC0965 0%, #710442 100%);
+  color: white;
+  max-width: fit-content;
+
+  &--primary {
+    &:hover {
+      background: var(--color-brand);
+    }
+  }
+
+  &--secondary {
+    border: 2px solid var(--color-brand);
+    background: white;
+    color: var(--color-brand);
+  }
+}
