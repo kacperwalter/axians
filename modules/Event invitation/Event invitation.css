@@ -2,7 +2,7 @@
   position: relative;
   display: grid;
   place-content: center;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 .event-invitation__background {
   position: absolute;
@@ -20,7 +20,7 @@
   grid-template-columns: 2fr 1fr;
   -moz-column-gap: 5rem;
        column-gap: 5rem;
-  padding: 5rem 5rem 5rem 10rem;
+  padding: 5rem 5rem 5rem 5rem;
 }
 @media (max-width: 900px) {
   .event-invitation__main {
