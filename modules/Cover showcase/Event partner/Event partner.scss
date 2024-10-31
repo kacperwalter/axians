@@ -1,0 +1,59 @@
+.event-partner {
+  display: grid;
+  place-content: center;
+  margin-bottom: 10rem;
+
+  @media (max-width: 1024px) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @media (max-width: 500px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  &__wrapper {
+    width: 100%;
+    max-width: 110rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    
+    
+    @media (min-width: 1200px) {
+      min-width: 110rem;
+    }
+
+    @media (max-width: 850px) {
+      grid-template-columns: 1fr;
+      place-content: center;
+      row-gap: 3rem;
+    }
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+
+    @media (max-width: 850px) {
+      text-align: center;
+    }
+  }
+
+  &__caption {
+    font-size: 1.8rem;
+
+    @media (max-width: 850px) {
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    max-width: 20rem;
+
+    @media (max-width: 850px) {
+      grid-row: 1;
+      place-self: center;
+    }
+  }
+}
