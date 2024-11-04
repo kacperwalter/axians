@@ -1,0 +1,23 @@
+<section class="event-testimonials">
+  <div class="event-testimonials__wrapper">
+    {% for testimonial in module.testimonials %}
+      <article class="testimonial {{ !loop.first ? 'is-hidden' : '' }}">
+        <img src="{{ testimonial.avatar.src }}" alt="{{ testimonial.avatar.alt }}" class="testimonial__avatar">
+        <div class="testimonial__content">
+          <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/quote.svg" alt="quote icon" class="testimonial__quote-icon">
+          <p class="testimonial__quote">{{ testimonial.quote }}</p>
+
+          <div class="testimonial__person">
+            <h4 class="testimonial__person-name">{{ testimonial.full_name }}</h4>
+            <p class="testimonial__person-position">{{ testimonial.position }}</p>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+
+    <div class="event-testimonials__controls">
+      <button class="event-testimonials__prev" data-testimonials-prev><</button>
+      <button class="event-testimonials__next" data-testimonials-next>></button>
+    </div>
+  </div>
+</section>
