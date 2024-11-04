@@ -39,13 +39,20 @@
   }
 }
 .event-logo-wall__logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
 }
 @media (max-width: 850px) {
   .event-logo-wall__logos {
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    justify-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .event-logo-wall__logos {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
   }
 }
 .event-logo-wall__logo {
