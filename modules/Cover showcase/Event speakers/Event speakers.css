@@ -18,7 +18,7 @@
 .event-speakers__heading {
   text-align: center;
   color: var(--color-blue);
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 .event-speakers__list {
   display: grid;
