@@ -1,0 +1,11 @@
+<section class="website-bottom">
+  <div class="website-bottom__wrapper">
+    <ul class="website-bottom__menu">
+      {% for element in module.menu %}
+        <li class="website-bottom__menu-element"><a href="{{ element.link.href }}">{{ element.text }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/logo-VINCI-1-1.webp" alt="Vinci logo" class="website-bottom__logo">
+  </div>
+</section>

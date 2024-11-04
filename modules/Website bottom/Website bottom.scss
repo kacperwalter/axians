@@ -1,0 +1,56 @@
+.website-bottom {
+  display: grid;
+  place-content: center;
+
+  @media (max-width: 768px) {
+   justify-content: left;
+  }  
+
+  &__wrapper {
+    max-width: 130rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    @media (min-width: 1300px) {
+      min-width: 120rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    
+    &-element {
+      list-style-type: none;
+
+      &:not(:last-child) {
+        @media (min-width: 768px) {
+          border-right: 1px solid var(--color-blue);
+          padding-right: 1rem;
+        }
+      }
+      
+      a {
+        text-decoration: none;
+        color: var(--color-blue);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    max-height: 5rem;
+  }
+}
