@@ -1,7 +1,7 @@
 <section class="event-testimonials">
   <div class="event-testimonials__wrapper">
     {% for testimonial in module.testimonials %}
-      <article class="testimonial {{ !loop.first ? 'is-hidden' : '' }}">
+      <article class="testimonial {{ !loop.first ? 'is-hidden' : '' }}" data-testimonial>
         <img src="{{ testimonial.avatar.src }}" alt="{{ testimonial.avatar.alt }}" class="testimonial__avatar">
         <div class="testimonial__content">
           <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/quote.svg" alt="quote icon" class="testimonial__quote-icon">
