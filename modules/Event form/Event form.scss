@@ -7,7 +7,8 @@
   &__wrapper {
     max-width: 110rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 10rem;
     z-index: 10;
     padding-top: 5rem;
 
@@ -24,13 +25,12 @@
 
   &__content {
     color: white;
-    max-width: 40rem; // probably only on bigger screens
+    // max-width: 40rem; // probably only on bigger screens
   }
 
   &__element {
     font-size: 2rem;
     list-style-type: none;
-    // margin: 0;
     font-weight: 100;
     position: relative;
 
@@ -45,7 +45,7 @@
   }
 
   &__form {
-    padding: 5rem 3rem;
+    padding: 5rem 6rem;
     background-color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
@@ -54,8 +54,33 @@
       font-size: 2.7rem;
     }
 
-    input {
-      // border: none;
+    .hs-form-field input:not([type="checkbox"]) {
+      width: 100%;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      font-size: 1.6rem;
+    }
+
+    .hs-richtext, .hs-form-booleancheckbox-display {
+      color: #A7A7A7;
+      font-size: 1rem;
+
+      span {
+        margin-left: 2rem;
+      }
+    }
+
+    .hs-button {
+      padding: 1.5rem 4rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #AC0965 0%, #710442 100%);
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      border: none;
+      max-width: fit-content;
+      margin-top: 2rem;
     }
   }
 
