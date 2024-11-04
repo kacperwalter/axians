@@ -1,14 +1,29 @@
 .button {
+  display: grid;
+  place-content: center;
   padding: 1.2rem 3.5rem;
   text-decoration: none;
   text-transform: uppercase;
   background: linear-gradient(90deg, #AC0965 0%, #710442 100%);
   color: white;
-  max-width: fit-content;
-
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  
   &--primary {
     &:hover {
       background: var(--color-brand);
+      
+      &::after {
+        transform: translateX(5px); /* Adjust slide distance */
+      }
+    }
+    
+    &::after {
+      content: ">";
+      margin-left: 0.5rem; /* Space between text and arrow */
+      transition: transform 0.3s ease;
+      display: inline-block;
     }
   }
 
@@ -16,5 +31,11 @@
     border: 2px solid var(--color-brand);
     background: white;
     color: var(--color-brand);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: var(--color-brand);
+      color: white;
+    }
   }
 }

@@ -100,6 +100,20 @@
   &__buttons {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+
+    .button {
+      max-width: fit-content;
+
+      @media (max-width: 500px) {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      &--secondary {
+        padding: 1.2rem 2.5rem;
+      }
+    }
   }
 }
 

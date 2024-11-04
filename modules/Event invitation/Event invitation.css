@@ -96,6 +96,20 @@
 .event-invitation__buttons {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+}
+.event-invitation__buttons .button {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+@media (max-width: 500px) {
+  .event-invitation__buttons .button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.event-invitation__buttons .button--secondary {
+  padding: 1.2rem 2.5rem;
 }
 
 .icon-box {
