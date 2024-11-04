@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Vinci Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url('//it.axians-it.pl/hubfs/landing-pages-assets/fonts/Vinci%20Sans%20Regular.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Vinci Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url('//it.axians-it.pl/hubfs/landing-pages-assets/fonts/Vinci%20Sans%20Bold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Vinci Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url('//it.axians-it.pl/hubfs/landing-pages-assets/fonts/Vinci%20Sans%20Medium.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Vinci Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url('//it.axians-it.pl/hubfs/landing-pages-assets/fonts/Vinci%20Sans%20Light.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Vinci Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url('//it.axians-it.pl/hubfs/landing-pages-assets/fonts/Vinci%20Sans%20Italic.otf') format("opentype");
+}
+
+:root {
+--color-gray: #F7F7F7;
+--color-brand: #A20067;
+--color-blue: #1354A9;
+--color-paragraph: #4F4F4F;
+}
+
+html {
+font-size: 10px;
+}
+
+body, p {
+font-size: 1.6rem;
+font-family: "Vinci Sans", sans-serif;
+margin: 0;
+color: var(--color-paragraph);
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: "Vinci Sans", sans-serif;
+font-weight: 100;
+}
+
+/* Example of using different font weights */
+strong {
+font-weight: 700;
+}
+
+em {
+font-style: italic;
+}

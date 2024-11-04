@@ -48,13 +48,14 @@
 }
 .event-invitation__heading p {
   color: var(--color-brand);
-  font-weight: 800;
+  font-weight: 500;
   font-size: 1.2rem;
 }
 .event-invitation__heading h1 {
   color: var(--color-blue);
-  font-size: 4rem;
+  font-size: 5rem;
   line-height: 1.2;
+  font-weight: 200;
 }
 .event-invitation__caption {
   font-size: 2rem;
@@ -134,5 +135,5 @@
 }
 .icon-box__content p {
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: normal;
 }/*# sourceMappingURL=Event invitation.css.map */
