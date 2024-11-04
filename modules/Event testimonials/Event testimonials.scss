@@ -9,6 +9,11 @@
   padding-bottom: 10rem;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 767px) {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+  }
   
   @media (max-width: 1024px) {
     padding-left: 5rem;
@@ -43,6 +48,10 @@
   align-items: center;
   gap: 4rem;
 
+  @media(max-width: 767px) {
+    flex-direction: column;
+  }
+
   &__avatar {
     width: 10rem;
   }
@@ -51,6 +60,11 @@
     display: grid;
     grid-template-columns: 1fr 10fr;
     row-gap: 4rem;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
   }
 
   &__quote-icon {
@@ -61,10 +75,18 @@
     grid-column: 2 / span 4;
     font-weight: 100;
     font-size: 2rem;
+
+    @media (max-width: 767px) {
+      grid-column: 1;
+    }
   }
 
   &__person {
     grid-column: 2;
+
+    @media (max-width: 767px) {
+      grid-column: 1;
+    }
 
     &-name {
       margin: 0;
