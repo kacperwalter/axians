@@ -6,11 +6,20 @@
    justify-content: left;
   }  
 
+  @media (max-width: 1024px) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @media (max-width: 850px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   &__wrapper {
     max-width: 130rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -24,6 +33,11 @@
   &__menu {
     display: flex;
     margin: 0;
+    padding: 0;
+
+    @media (min-width: 769px) {
+      align-items: center;
+    }
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -31,6 +45,12 @@
     
     &-element {
       list-style-type: none;
+      margin: 0;
+      padding-left: 1rem;
+
+      &:first-child {
+        padding-left: 0rem;
+      }
 
       &:not(:last-child) {
         @media (min-width: 768px) {

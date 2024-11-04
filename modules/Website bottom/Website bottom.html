@@ -2,7 +2,7 @@
   <div class="website-bottom__wrapper">
     <ul class="website-bottom__menu">
       {% for element in module.menu %}
-        <li class="website-bottom__menu-element"><a href="{{ element.link.href }}">{{ element.text }}</a></li>
+        <li class="website-bottom__menu-element"><a href="{{ element.link.url.href }}">{{ element.text }}</a></li>
       {% endfor %}
     </ul>
 
