@@ -25,16 +25,18 @@
         </div>
       </div>
 
-      <!-- icon-box component -->
-      <div class="icon-box">
-        <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/place.svg" alt="place icon">
-        
-        <div class="icon-box__content">
-          <p>{{ module.place.place }}</p>
-          <p>{{ module.place.street }}</p>
-          <p>{{ module.place.city }}</p>
+      {% if module.is_place_displayed %}
+        <!-- icon-box component -->
+        <div class="icon-box">
+          <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/place.svg" alt="place icon">
+          
+          <div class="icon-box__content">
+            <p>{{ module.place.place }}</p>
+            <p>{{ module.place.street }}</p>
+            <p>{{ module.place.city }}</p>
+          </div>
         </div>
-      </div>
+      {% endif %}
     </div>
 
     <div class="event-invitation__buttons">

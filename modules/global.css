@@ -63,4 +63,8 @@ strong {
 
 em {
   font-style: italic;
+}
+
+.overlay-content p {
+  color: white;
 }/*# sourceMappingURL=global.css.map */
