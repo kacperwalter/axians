@@ -1,0 +1,14 @@
+<div class="website-footer">
+  <div class="website-footer__wrapper">
+    <div class="website-footer__content">
+      <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}" class="website-footer__logo">
+      <p class="website-footer__caption">{{ module.caption }}</p>
+    </div>
+
+    <ul class="website-footer__menu">
+      {% for element in module.menu %}
+        <li class="website-footer__menu-element"><a href="{{ element.link.href }}">{{ element.text }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

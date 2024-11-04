@@ -1,0 +1,58 @@
+.website-footer {
+  background-color: #081627;
+  color: white;
+  display: grid;
+  place-content: center;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+
+  &__wrapper {
+    max-width: 130rem;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: 1300px) {
+      min-width: 120rem;
+    }
+
+    @media (max-width: 1024px) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  
+    @media (max-width: 850px) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 3rem;
+  }
+
+  &__caption {
+    color: white;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 4rem;
+
+    &-element {
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 1.4rem;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
