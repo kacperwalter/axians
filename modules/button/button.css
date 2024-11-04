@@ -1,7 +1,5 @@
 .button {
-  display: grid;
-  place-content: center;
-  padding: 1.2rem 3.5rem;
+  padding: 1.5rem 4rem;
   text-decoration: none;
   text-transform: uppercase;
   background: linear-gradient(90deg, #AC0965 0%, #710442 100%);
@@ -9,6 +7,10 @@
   display: inline-flex;
   align-items: center;
   position: relative;
+}
+.button__icon {
+  max-width: 3rem;
+  max-height: 3rem;
 }
 .button--primary:hover {
   background: var(--color-brand);
