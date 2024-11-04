@@ -50,6 +50,10 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+
+    @media (min-width: 1025px) {
+      margin-left: 1rem;
+    }
   }
 
   &__element {
@@ -58,13 +62,14 @@
     position: relative;
     padding-left: 1.5rem;
     margin: 0;
+    font-weight: 100;
 
     &:before {
       content: "•";
+      font-size: 8.5rem;
       position: absolute;
-      left: 0;
-      top: -2rem;
-      font-size: 4.5rem; /* Adjust size for a larger dot */
+      left: -1rem;
+      top: -5rem;
       color: var(--color-blue); /* Change dot color to blue */
     }
   }
