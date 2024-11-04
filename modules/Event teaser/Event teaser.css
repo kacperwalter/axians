@@ -10,7 +10,6 @@
   max-width: 110rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10rem;
   align-items: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -40,7 +39,6 @@
 }
 .event-teaser__heading {
   max-width: 50rem;
-  margin-bottom: 2rem;
 }
 @media (max-width: 850px) {
   .event-teaser__heading {
@@ -48,6 +46,11 @@
     text-align: center;
     max-width: none;
   }
+}
+.event-teaser__caption {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 100;
 }
 .event-teaser__elements {
   display: grid;
@@ -95,7 +98,12 @@
   bottom: 0;
   right: 0;
   z-index: 9;
-  height: 80%;
+  height: 90%;
+}
+@media (max-width: 1024px) {
+  .event-teaser__background-element {
+    height: 67%;
+  }
 }
 @media (max-width: 850px) {
   .event-teaser__background-element {
@@ -104,6 +112,6 @@
 }
 @media (min-width: 1900px) {
   .event-teaser__background-element {
-    height: 90%;
+    height: 95%;
   }
 }/*# sourceMappingURL=Event teaser.css.map */

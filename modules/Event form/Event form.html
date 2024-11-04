@@ -1,0 +1,27 @@
+<section class="event-form" id="form">
+  <div class="event-form__wrapper">
+    <div class="event-form__content">
+      <h2 class="event-form__heading">{{ module.heading }}</h2>
+  
+      <ul class="event-form__elements">
+        {% for element in module.elements %}
+          <li class="event-form__element">{{ element }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  
+    <div class="event-form__form">
+      <h3 class="event-form__form-heading">Zapisz się na wydarzenie</h3>
+
+      {% form
+        form_to_use="{{ module.form.form_id }}"
+        response_response_type="{{ module.form.response_type }}"
+        response_message="{{ module.form.message }}"
+        response_redirect_id="{{ module.form.redirect_id }}"
+        response_redirect_url="{{ module.form.redirect_url}}"
+      %}
+    </div>
+  </div>
+
+  <div class="event-form__background"></div>
+</section>

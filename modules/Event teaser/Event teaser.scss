@@ -9,7 +9,7 @@
     max-width: 110rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10rem;
+    // gap: 10rem;
     align-items: center;
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -36,13 +36,18 @@
 
   &__heading {
     max-width: 50rem;
-    margin-bottom: 2rem;
 
     @media(max-width: 850px) {
       place-self: center;
       text-align: center;
       max-width: none;
     }
+  }
+
+  &__caption {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 100;
   }
 
   &__elements {
@@ -92,14 +97,18 @@
     bottom: 0;
     right: 0;
     z-index: 9;
-    height: 80%;
+    height: 90%;
+
+    @media (max-width: 1024px) {
+      height: 67%;
+    }
 
     @media (max-width: 850px) {
       display: none;
     }
 
     @media (min-width: 1900px) {
-      height: 90%;
+      height: 95%;
     }
   }
 }
