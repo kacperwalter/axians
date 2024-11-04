@@ -1,8 +1,84 @@
 .event-testimonials {
+  display: grid;
+  place-content: center;
+  background-color: var(--color-gray);
 
+ &__wrapper {
+  max-width: 110rem;
+  padding-top: 12rem;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  
+  @media (max-width: 1024px) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @media (max-width: 850px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+ }
+
+ &__controls {
+  align-self: flex-end;
+
+  button {
+    border: none;
+    background: none;
+    font-size: 3rem;
+    color: #656565;
+
+    &:hover {
+      background-color: beige;
+    }
+  }
+}
 }
 
 .testimonial {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+
+  &__avatar {
+    width: 10rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    row-gap: 4rem;
+  }
+
+  &__quote-icon {
+    grid-column: 1;
+  }
+
+  &__quote {
+    grid-column: 2 / span 4;
+    font-weight: 100;
+    font-size: 2rem;
+  }
+
+  &__person {
+    grid-column: 2;
+
+    &-name {
+      margin: 0;
+      font-size: 3.2rem;
+      font-weight: 100;
+    }
+
+    &-position {
+      color: var(--color-brand);
+      font-size: 1.3rem;
+      font-weight: 100;
+    }
+  }
+
   &.is-hidden {
     display: none;
   }
