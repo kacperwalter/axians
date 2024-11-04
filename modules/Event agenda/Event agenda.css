@@ -1,5 +1,6 @@
 .event-agenda {
   display: grid;
+  gap: 2rem;
   place-content: center;
   margin-bottom: 10rem;
 }
@@ -18,7 +19,6 @@
 .event-agenda h2 {
   text-align: center;
   color: var(--color-blue);
-  font-size: 3.2rem;
 }
 .event-agenda__wrapper {
   max-width: 100rem;
@@ -31,6 +31,8 @@
   font-weight: bold;
   width: 100%;
   border-bottom: 2px solid var(--color-brand);
+  padding-bottom: 0.5rem;
+  font-size: 2.3rem;
 }
 .event-agenda__event-listing {
   margin-top: 3rem;
@@ -50,8 +52,11 @@
   text-transform: uppercase;
   color: var(--color-blue);
   font-size: 1.8rem;
+  font-weight: bold;
   width: 100%;
   border-bottom: 2px solid var(--color-blue);
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
 .agenda-item {
@@ -71,6 +76,7 @@
 }
 .agenda-item__time-and-name h5 {
   font-size: 2rem;
+  font-weight: bold;
   color: var(--color-blue);
   margin-bottom: 0;
 }

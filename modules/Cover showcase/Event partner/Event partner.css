@@ -34,9 +34,6 @@
     row-gap: 3rem;
   }
 }
-.event-partner__heading {
-  font-size: 3.2rem;
-}
 @media (max-width: 850px) {
   .event-partner__heading {
     text-align: center;
