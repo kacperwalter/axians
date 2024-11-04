@@ -97,6 +97,11 @@
         max-width: unset;
       }
     }
+
+    .submitted-message {
+      font-size: 3rem;
+      color: var(--color-blue);
+    }
   }
 
   &__background {

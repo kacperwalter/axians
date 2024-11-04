@@ -98,6 +98,10 @@
     max-width: unset;
   }
 }
+.event-form__form .submitted-message {
+  font-size: 3rem;
+  color: var(--color-blue);
+}
 .event-form__background {
   position: absolute;
   top: 0;
