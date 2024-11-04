@@ -40,6 +40,12 @@
 .event-testimonials__controls button:hover {
   background-color: beige;
 }
+.event-testimonials__controls button img {
+  height: 2rem;
+}
+.event-testimonials__prev {
+  margin-right: 1rem;
+}
 
 .testimonial {
   display: flex;

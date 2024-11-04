@@ -38,7 +38,15 @@
     &:hover {
       background-color: beige;
     }
+
+    img {
+      height: 2rem;
+    }
   }
+}
+
+&__prev {
+  margin-right: 1rem;
 }
 }
 

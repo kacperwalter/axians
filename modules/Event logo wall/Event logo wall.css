@@ -21,6 +21,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
+  place-items: center;
 }
 @media (max-width: 850px) {
   .event-logo-wall__wrapper {
@@ -39,22 +40,15 @@
   }
 }
 .event-logo-wall__logos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
-@media (max-width: 850px) {
-  .event-logo-wall__logos {
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    justify-items: center;
-  }
-}
-@media (max-width: 500px) {
-  .event-logo-wall__logos {
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-  }
-}
 .event-logo-wall__logo {
-  max-width: 15rem;
+  max-height: 5rem;
+}
+@media (max-width: 768px) {
+  .event-logo-wall__logo {
+    max-height: 3rem;
+  }
 }/*# sourceMappingURL=Event logo wall.css.map */
