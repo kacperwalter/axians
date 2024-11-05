@@ -7,14 +7,16 @@
   display: inline-flex;
   align-items: center;
   position: relative;
+  gap: 1rem; /* Space between icon and text */
 
   &:hover {
     cursor: pointer;
   }
 
   &__icon {
-    max-width: 3rem;
-    max-height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0; /* Prevent icon from shrinking */
   }
   
   &--primary {
@@ -35,6 +37,7 @@
   }
 
   &--secondary {
+    padding: 1.2rem 3rem; /* Adjust padding to fit text */
     border: 2px solid var(--color-brand);
     background: white;
     color: var(--color-brand);
