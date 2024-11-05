@@ -37,6 +37,13 @@
           </div>
         </div>
       {% endif %}
+
+      {% if module.is_partner_displayed %}
+        <div class="partner-box">
+          <p>{{ module.client_partner.header }}</p>
+          <img src="{{ module.client_partner.logo.src }}" alt="{{ module.client_partner.logo.alt }}">
+        </div>
+      {% endif %}
     </div>
 
     <div class="event-hero__buttons">

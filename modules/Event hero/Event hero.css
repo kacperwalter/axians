@@ -117,4 +117,8 @@
 .event-hero .icon-box__content p {
   font-size: 1.8rem;
   font-weight: normal;
+}
+.event-hero .partner-box p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=Event hero.css.map */
