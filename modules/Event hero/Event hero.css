@@ -12,7 +12,7 @@
   z-index: 0;
 }
 .event-hero__main {
-  max-width: 80rem;
+  max-width: 90rem;
   z-index: 10;
   background-color: white;
   margin-top: 10rem;
@@ -63,25 +63,13 @@
   display: flex;
   gap: 3rem;
 }
-@media (max-width: 900px) {
-  .event-hero__time-place .icon-box:first-child {
-    padding: 0;
-  }
-}
-.event-hero__time-place .icon-box:first-child .icon-box__content {
+.event-hero__time-place > *:not(:last-child) {
   border-right: 2px solid var(--color-blue);
   padding-right: 3rem;
 }
 @media (max-width: 900px) {
-  .event-hero__time-place .icon-box:first-child .icon-box__content {
-    padding-right: none;
+  .event-hero__time-place .icon-box:first-child {
     padding: 0;
-  }
-}
-@media (max-width: 500px) {
-  .event-hero__time-place .icon-box:first-child .icon-box__content {
-    padding-right: 2px solid var(--color-blue);
-    padding-right: 2rem;
   }
 }
 .event-hero__buttons {
