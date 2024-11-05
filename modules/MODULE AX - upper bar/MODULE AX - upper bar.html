@@ -1,0 +1,51 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+
+
+
+<section class="section-upper">
+  <!-- Pasek Fixed -->
+  <div class="fixed-bar">
+    <div class="flex-upper">
+      <div class='upper-column'>
+        <a href="https://www.axians.pl/"><img src='{{module.image_field.src}}' width="151px"></a>
+      </div>
+      <div class="upper-column-right">
+        <div class='upper-column-right-text'>
+       <div class='upper-column'>
+       <a href='https://www.axians.pl/kontakt-axians-it/'>Kontakt</a>
+      </div>
+        <div class='upper-column'>
+       <a href='https://www.axians.pl/centrum-wiedzy/'>Centrum wiedzy</a>
+      </div>
+      <div class='upper-column'>
+        <a href='https://www.axians.pl/aktualnosci/'>Aktualności</a>
+       </div>
+        </div>
+      <div class='upper-column-right-social'>
+        <div class='upper-column-social'>
+        <a href='https://www.linkedin.com/company/axiansitpoland/'><img src='{{module.fb_icon.src}}' width="29px"></a>
+      </div>
+      <div class='upper-column-social'>
+        <a href='https://www.youtube.com/@axiansitpoland'><img src='{{module.yt_icon.src}}' width="35px"></a>
+      </div>
+        </div>
+      
+      </div>
+     
+    </div>
+  </div>
+
+  
+  <script>
+  window.addEventListener('scroll', function() {
+    const fixedBar = document.querySelector('.fixed-bar');
+    if (window.scrollY > 100) { // Liczba pikseli, po której element ma stać się fixed
+      fixedBar.classList.add('is-fixed');
+    } else {
+      fixedBar.classList.remove('is-fixed');
+    }
+  });
+</script>
