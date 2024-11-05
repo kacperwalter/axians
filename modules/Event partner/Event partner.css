@@ -53,11 +53,12 @@
   }
 }
 .event-partner__logo {
-  max-width: 20rem;
+  max-width: 40rem;
 }
 @media (max-width: 850px) {
   .event-partner__logo {
     grid-row: 1;
     place-self: center;
+    max-width: 25rem;
   }
 }/*# sourceMappingURL=Event partner.css.map */

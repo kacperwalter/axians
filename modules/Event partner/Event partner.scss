@@ -49,11 +49,12 @@
   }
 
   &__logo {
-    max-width: 20rem;
+    max-width: 40rem;
 
     @media (max-width: 850px) {
       grid-row: 1;
       place-self: center;
+      max-width: 25rem;
     }
   }
 }
