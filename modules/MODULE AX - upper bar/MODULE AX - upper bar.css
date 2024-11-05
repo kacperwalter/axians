@@ -13,10 +13,6 @@
   color: var(--color-blue);
 }
 
-.upper-column a:visited {
-  color: var(--color-paragraph);
-}
-
 .fixed-bar {
   font-family: Vinci1;
   font-size: 16px;
