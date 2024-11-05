@@ -19,6 +19,7 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     align-items: center;
+    column-gap: 6rem;
     
     @media (min-width: 1200px) {
       min-width: 110rem;
