@@ -15,14 +15,16 @@
       </article>
     {% endfor %}
 
-    <div class="event-testimonials__controls">
-      <button class="event-testimonials__prev" data-testimonials-prev>
-        <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-left.svg" alt="">
-      </button>
-      
-      <button class="event-testimonials__next" data-testimonials-next>
-        <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/ARROW-right.svg" alt="">
-      </button>
-    </div>
+    {% if module.testimonials|length > 1 %}
+      <div class="event-testimonials__controls">
+        <button class="event-testimonials__prev" data-testimonials-prev>
+          <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-left.svg" alt="">
+        </button>
+        
+        <button class="event-testimonials__next" data-testimonials-next>
+          <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/ARROW-right.svg" alt="">
+        </button>
+      </div>
+    {% endif %}
   </div>
 </section>
