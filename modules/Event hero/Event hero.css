@@ -12,6 +12,7 @@
   z-index: 0;
 }
 .event-hero__main {
+  position: relative;
   max-width: 90rem;
   z-index: 10;
   background-color: white;
@@ -81,6 +82,11 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
+@media (max-width: 768px) {
+  .event-hero__buttons {
+    margin-bottom: 2rem;
+  }
+}
 .event-hero__buttons .button {
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -93,6 +99,27 @@
 }
 .event-hero__buttons .button--secondary {
   padding: 1.2rem 2.5rem;
+}
+.event-hero__bottom-triangle {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@keyframes jump {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -0.5rem);
+  }
+}
+.event-hero__mouse-icon {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: jump 1s ease-in-out infinite;
 }
 .event-hero .icon-box {
   display: flex;

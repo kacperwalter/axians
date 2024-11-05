@@ -13,6 +13,7 @@
   }
 
   &__main {
+    position: relative;
     max-width: 90rem;
     z-index: 10;
     background-color: white;
@@ -87,6 +88,10 @@
     flex-wrap: wrap;
     gap: 1rem;
 
+    @media (max-width: 768px) {
+      margin-bottom: 2rem;
+    }
+
     .button {
       max-width: fit-content;
 
@@ -99,6 +104,30 @@
         padding: 1.2rem 2.5rem;
       }
     }
+  }
+
+  &__bottom-triangle {
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @keyframes jump {
+    0%, 100% {
+      transform: translate(-50%, 0);
+    }
+    50% {
+      transform: translate(-50%, -0.5rem);
+    }
+  }
+
+  &__mouse-icon {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: jump 1s ease-in-out infinite;
   }
 
   // If refactoring then move it to components folder
