@@ -52,8 +52,15 @@
     text-align: center;
   }
 }
+.event-partner__caption a strong {
+  font-weight: 100;
+}
 .event-partner__logo {
   max-width: 40rem;
+  transition: transform 0.5s;
+}
+.event-partner__logo:hover {
+  transform: scale(1.1);
 }
 @media (max-width: 850px) {
   .event-partner__logo {
