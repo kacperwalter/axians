@@ -60,6 +60,13 @@
 }
 .testimonial__avatar {
   width: 10rem;
+  align-self: flex-start;
+  margin-top: 3rem;
+}
+@media (max-width: 767px) {
+  .testimonial__avatar {
+    margin-top: 0;
+  }
 }
 .testimonial__content {
   display: grid;
