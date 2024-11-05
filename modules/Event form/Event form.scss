@@ -4,6 +4,12 @@
   place-content: center;
   margin-bottom: 10rem;
 
+  &__heading {
+    @media (max-width: 769px) {
+      text-align: center;
+    }
+  }
+
   &__wrapper {
     max-width: 110rem;
     display: grid;
@@ -35,11 +41,21 @@
     }
   }
 
+  &__elements {
+    @media (max-width: 769px) {
+      margin-bottom: 3rem;
+    }
+  }
+
   &__element {
     font-size: 2rem;
     list-style-type: none;
     font-weight: 100;
     position: relative;
+
+    @media (max-width: 769px) {
+      text-align: center;
+    }
 
     &:before {
       content: "•";

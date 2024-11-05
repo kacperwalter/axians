@@ -4,6 +4,8 @@
 
   @media (max-width: 768px) {
    justify-content: left;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
   }  
 
   @media (max-width: 1024px) {
@@ -32,6 +34,7 @@
 
   &__menu {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 
@@ -40,7 +43,7 @@
     }
 
     @media (max-width: 768px) {
-      flex-direction: column;
+      justify-content: center;
     }
     
     &-element {
@@ -72,5 +75,11 @@
 
   &__logo {
     max-height: 5rem;
+
+    @media (max-width: 769px) {
+      width: 70%;
+      max-height: unset;
+      align-self: center;
+    }
   }
 }

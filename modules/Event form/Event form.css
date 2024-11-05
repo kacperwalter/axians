@@ -5,6 +5,11 @@
   place-content: center;
   margin-bottom: 10rem;
 }
+@media (max-width: 769px) {
+  .event-form__heading {
+    text-align: center;
+  }
+}
 .event-form__wrapper {
   max-width: 110rem;
   display: grid;
@@ -39,11 +44,21 @@
     padding-top: 8rem;
   }
 }
+@media (max-width: 769px) {
+  .event-form__elements {
+    margin-bottom: 3rem;
+  }
+}
 .event-form__element {
   font-size: 2rem;
   list-style-type: none;
   font-weight: 100;
   position: relative;
+}
+@media (max-width: 769px) {
+  .event-form__element {
+    text-align: center;
+  }
 }
 .event-form__element:before {
   content: "•";
