@@ -73,11 +73,17 @@
   padding: 1rem;
   font-size: 1.6rem;
 }
-.event-form__form .hs-richtext, .event-form__form .hs-form-booleancheckbox-display {
+.event-form__form .hs-richtext,
+.event-form__form .hs-richtext p,
+.event-form__form .hs-form-booleancheckbox-display,
+.event-form__form .hs-form-booleancheckbox p {
   color: #A7A7A7;
   font-size: 1rem;
 }
-.event-form__form .hs-richtext span, .event-form__form .hs-form-booleancheckbox-display span {
+.event-form__form .hs-richtext span,
+.event-form__form .hs-richtext p span,
+.event-form__form .hs-form-booleancheckbox-display span,
+.event-form__form .hs-form-booleancheckbox p span {
   margin-left: 2rem;
 }
 .event-form__form .hs-button {

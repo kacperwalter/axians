@@ -72,7 +72,10 @@
       font-size: 1.6rem;
     }
 
-    .hs-richtext, .hs-form-booleancheckbox-display {
+    .hs-richtext, 
+    .hs-richtext p, 
+    .hs-form-booleancheckbox-display,
+    .hs-form-booleancheckbox p {
       color: #A7A7A7;
       font-size: 1rem;
 
