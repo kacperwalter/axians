@@ -14,9 +14,13 @@
     padding-right: 3rem;
   }
 
-  h2 {
+  &__heading {
     text-align: center;
     color: var(--color-blue);
+  }
+
+  &__caption {
+    text-align: center;
   }
 
   &__wrapper {

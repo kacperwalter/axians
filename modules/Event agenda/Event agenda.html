@@ -1,5 +1,9 @@
 <section class="event-agenda">
   <h2 class="event-agenda__heading">{{ module.heading }}</h2>
+  
+  {% if module.caption %}
+    <p class="event-agenda__caption">{{ module.caption }}</p>
+  {% endif %}
 
   <div class="event-agenda__wrapper">
     {% for day in module.days %}
