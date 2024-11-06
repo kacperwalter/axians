@@ -5,6 +5,13 @@
   place-content: center;
   margin-bottom: 10rem;
 
+  &--reversed {
+    .event-teaser__background-element {
+      left: 0;
+      transform: scaleX(-1);
+    }
+  }
+
   &__wrapper {
     max-width: 110rem;
     display: grid;
@@ -15,6 +22,17 @@
     z-index: 10;
 
     &--reversed {
+      max-width: 140rem;
+      gap: 6rem;
+
+      @media (min-width: 850px) {
+        transform: translateX(-10rem);
+      }
+
+      @media(max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+
       & > .event-teaser__image {
         order: 1;
         justify-self: left;
@@ -35,6 +53,8 @@
     
       @media (max-width: 850px) {
         grid-template-columns: 1fr;
+        padding-left: 5rem;
+        padding-right: 5rem;
       }
     }
 
