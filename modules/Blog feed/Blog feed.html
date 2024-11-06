@@ -1,0 +1,26 @@
+<section class="blog-feed">
+  <div class="blog-feed__wrapper">
+    <h2 class="blog-feed__heading">
+      {{ module.heading }}
+    </h2>
+
+    <a href="{{ module.button.url.href }}" class="button button--primary">
+      {{ module.button.text }}
+    </a>
+
+    <ul class="blog-feed__listing">
+      {% for tile in module.tiles %}
+        <li class="blog-feed__listing-element">
+          <a href="{{ tile.url.href }}">
+            <img src="{{ tile.image.src }}" alt="{{ tile.image.alt }}">
+
+            <div class="blog-feed__listing-element-info">
+              <p>{{ tile.date }}</p>
+              <h5>{{ tile.title }}</h5>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
