@@ -1,0 +1,117 @@
+.event-teaser {
+  position: relative;
+  background-color: var(--color-gray);
+  display: grid;
+  place-content: center;
+  margin-bottom: 10rem;
+
+  &__wrapper {
+    max-width: 110rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    z-index: 10;
+
+    &--reversed {
+      
+    }
+
+    @media (max-width: 850px) {
+      gap: 1rem;
+    }
+
+    @media (max-width: 850px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 1024px) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  
+    @media (max-width: 850px) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  &__heading {
+    max-width: 50rem;
+
+    @media(max-width: 850px) {
+      place-self: center;
+      text-align: center;
+      max-width: none;
+    }
+  }
+
+  &__caption {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+
+  &__elements {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @media (min-width: 1025px) {
+      margin-left: 1rem;
+    }
+  }
+
+  &__element {
+    font-size: 2rem;
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+    margin: 0;
+    font-weight: 100;
+
+    &:before {
+      content: "•";
+      font-size: 8.5rem;
+      position: absolute;
+      left: -1rem;
+      top: -5rem;
+      color: var(--color-blue); /* Change dot color to blue */
+    }
+  }
+
+  &__image {
+    max-height: 50rem;
+    justify-self: right;
+
+    @media (max-width: 850px) {
+      max-width: 100%;
+      place-self: center;
+    }
+
+    @media (min-width: 1900px) {
+      max-height: 60rem;
+    }
+  }
+
+  &__background-element {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    height: 90%;
+
+    @media (max-width: 1024px) {
+      height: 67%;
+    }
+
+    @media (max-width: 850px) {
+      display: none;
+    }
+
+    @media (min-width: 1900px) {
+      height: 95%;
+    }
+  }
+}

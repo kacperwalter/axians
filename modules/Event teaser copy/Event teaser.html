@@ -1,0 +1,20 @@
+<section class="event-teaser">
+  <div class="event-teaser__wrapper {{ module.is_layout_reversed ? 'event-teaser__wrapper--reversed' : '' }}">
+    <div class="event-teaser__content">
+      <h2 class="event-teaser__heading">{{ module.heading }}</h2>
+      <p class="event-teaser__caption">{{ module.caption }}</p>
+
+      <ul class="event-teaser__elements">
+        {% for element in module.elements %}
+          <li class="event-teaser__element">
+            {{ element }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <img src="{{ module.image.src }}" alt="" class="event-teaser__image">
+  </div>
+
+  <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/background-el-right.svg" alt="axians logo background-color" class="event-teaser__background-element">
+</section>
