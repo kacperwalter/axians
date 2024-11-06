@@ -40,7 +40,6 @@
 }
 .event-teaser__wrapper--reversed > .event-teaser__image {
   order: 1;
-  justify-self: left;
 }
 @media (max-width: 1024px) {
   .event-teaser__wrapper--reversed > .event-teaser__image {
