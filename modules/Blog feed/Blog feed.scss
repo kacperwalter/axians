@@ -2,6 +2,7 @@
   display: grid;
   place-content: center;
   background: var(--color-gray);
+  margin-bottom: 10rem;
 
   &__wrapper {
     max-width: 110rem;
@@ -25,6 +26,7 @@
 
   &__heading {
     text-align: center;
+    max-width: 72rem;
   }
 
   .button {
@@ -47,6 +49,50 @@
 
     @media (max-width: 600px) {
       grid-template-columns: 1fr;
+    }
+
+    &-element {
+      max-width: 25rem;
+      margin: 0;
+
+      a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        &:hover {
+          .blog-feed__listing-element-info p {
+            color: var(--color-paragraph);
+          }
+          
+          .blog-feed__listing-element-info h5 {
+            color: var(--color-brand);
+          }
+        }
+      }
+
+      &-info {      
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        p {
+          color: #C8C8C8;
+          font-size: 1.8rem;
+          font-weight: 400;
+          text-decoration: none;
+          transition: color .2s;
+        }
+
+        h5 {
+          font-weight: 500;
+          color: #A3A3A3;
+          font-size: 1.8rem;
+          text-decoration: none;
+          transition: color .2s;
+        }
+      }
     }
   }
 }
