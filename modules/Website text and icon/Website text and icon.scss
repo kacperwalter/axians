@@ -1,0 +1,39 @@
+.website-text-and-icon {
+  display: grid;
+  place-content: center;
+  margin-bottom: 10rem;
+
+  &__wrapper {
+    max-width: 110rem;
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    gap: 6rem;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  
+    @media (max-width: 850px) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 3rem;
+    }
+  }
+
+  &__text {
+    p {
+      font-size: 2.3rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      @media (max-width: 850px) {
+        text-align: center;
+      }
+    }
+  }
+}
