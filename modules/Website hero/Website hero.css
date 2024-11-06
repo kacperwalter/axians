@@ -2,7 +2,7 @@
   position: relative;
   display: grid;
   place-content: center;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 .website-hero__background {
   position: absolute;
@@ -22,11 +22,21 @@
   flex-direction: column;
   align-items: center;
   gap: 4.4rem;
+  transition: transform 0.2s;
+}
+@media (max-width: 768px) {
+  .website-hero__main {
+    padding: 3rem;
+    margin-top: 10rem;
+    gap: 2.2rem;
+  }
 }
 @media (max-width: 900px) {
   .website-hero__main {
     margin-left: 5rem;
     margin-right: 5rem;
+    margin-top: 10rem;
+    gap: 3rem;
   }
 }
 @media (max-width: 500px) {
@@ -47,11 +57,21 @@
   line-height: normal;
   margin-bottom: 2rem;
 }
+@media (max-width: 768px) {
+  .website-hero__heading {
+    font-size: 4rem;
+  }
+}
 .website-hero__subheading {
   font-size: 2.6rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+@media (max-width: 768px) {
+  .website-hero__subheading {
+    font-size: 2rem;
+  }
 }
 .website-hero__caption {
   font-size: 2rem;

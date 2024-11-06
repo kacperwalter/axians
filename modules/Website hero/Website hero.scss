@@ -2,7 +2,7 @@
   position: relative;
   display: grid;
   place-content: center;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 
   &__background {
     position: absolute;
@@ -23,10 +23,19 @@
     flex-direction: column;
     align-items: center;
     gap: 4.4rem;
+    transition: transform 0.2s;
+
+    @media (max-width: 768px) {
+      padding: 3rem;
+      margin-top: 10rem;
+      gap: 2.2rem;
+    }
 
     @media (max-width: 900px) {
       margin-left: 5rem;
       margin-right: 5rem;
+      margin-top: 10rem;
+      gap: 3rem;
     }
 
     @media (max-width: 500px) {
@@ -46,6 +55,10 @@
     font-weight: 400;
     line-height: normal;
     margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      font-size: 4rem;
+    }
   }
 
   &__subheading {
@@ -53,6 +66,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
   &__caption {
