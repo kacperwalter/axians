@@ -1,14 +1,25 @@
 .cta {
   color: white;
-  font-family: 'Inter', sans-serif;
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-bottom: 10rem;
+  background: #092552; // fallback
+  background: linear-gradient(90deg, #092552 0%, #114A86 62.5%);
   
   .wrapper {
-    background: #092552; // fallback
-    background: linear-gradient(90deg, #092552 0%, #114A86 62.5%);
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    max-width: 110rem;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (max-width: 1024px) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  
+    @media (max-width: 850px) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
 
   &__heading {
@@ -20,6 +31,7 @@
   &__caption {
     font-weight: 200;
     margin-bottom: 40px;
+    color: white;
   }
 
   &__button {
