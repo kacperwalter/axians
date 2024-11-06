@@ -148,11 +148,6 @@
     place-self: center;
   }
 }
-@media (min-width: 1900px) {
-  .event-teaser__image {
-    max-height: 60rem;
-  }
-}
 .event-teaser__background-element {
   position: absolute;
   bottom: 0;
