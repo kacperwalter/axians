@@ -15,7 +15,27 @@
     z-index: 10;
 
     &--reversed {
-      
+      & > .event-teaser__image {
+        order: 1;
+        justify-self: left;
+    
+        @media (max-width: 850px) {
+          place-self: center;
+        }
+      }
+    
+      & > .event-teaser__content {
+        order: 2;
+    
+        @media (max-width: 850px) {
+          place-self: center;
+          text-align: center;
+        }
+      }
+    
+      @media (max-width: 850px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 850px) {
