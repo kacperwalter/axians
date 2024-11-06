@@ -21,6 +21,23 @@
       padding-left: 3rem;
       padding-right: 3rem;
     }
+
+    &--reversed {
+      & > .website-text-and-image__image {
+        order: 2;
+      }
+      
+      & > .website-text-and-image__content {
+        order: 1;
+      }
+
+      @media (max-width: 850px) {
+        & > .website-text-and-image__image,
+        & > .website-text-and-image__content {
+          order: initial;
+        }
+      }
+    }
   }
 
   &__image {

@@ -24,6 +24,17 @@
     padding-right: 3rem;
   }
 }
+.website-text-and-image__wrapper--reversed > .website-text-and-image__image {
+  order: 2;
+}
+.website-text-and-image__wrapper--reversed > .website-text-and-image__content {
+  order: 1;
+}
+@media (max-width: 850px) {
+  .website-text-and-image__wrapper--reversed > .website-text-and-image__image, .website-text-and-image__wrapper--reversed > .website-text-and-image__content {
+    order: initial;
+  }
+}
 .website-text-and-image__image {
   max-width: 58rem;
 }
