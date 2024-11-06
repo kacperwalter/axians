@@ -7,14 +7,14 @@ const observerCallback = (mutationsList, observer) => {
 
             if (targetElement) {
                 const headingToRemove = document.querySelector(["[data-form-heading]"])
-                const backgroundToAddMargin = document.querySelector("[data-form-background]")
+                const elementToOffset = document.querySelector("[data-event-partner]")
                 
                 if (headingToRemove) {
                   headingToRemove.remove()
                 }
 
-                if (backgroundToAddMargin) {
-                  backgroundToAddMargin.style.marginBottom = "10rem"
+                if (elementToOffset) {
+                    elementToOffset.style.marginTop = "10rem"
               }
 
                 observer.disconnect()

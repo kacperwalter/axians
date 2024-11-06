@@ -55,6 +55,9 @@
 .event-partner__caption a strong {
   font-weight: 100;
 }
+.event-partner__link {
+  display: grid;
+}
 .event-partner__logo {
   max-width: 40rem;
   transition: transform 0.5s;

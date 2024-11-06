@@ -52,6 +52,10 @@
     }
   }
 
+  &__link {
+    display: grid;
+  }
+
   &__logo {
     max-width: 40rem;
     transition: transform .5s;
