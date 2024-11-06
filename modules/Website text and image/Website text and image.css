@@ -79,6 +79,7 @@
 .website-text-and-image__caption li {
   list-style-type: none;
   position: relative;
+  font-size: 2rem;
 }
 @media (min-width: 768px) {
   .website-text-and-image__caption li {
