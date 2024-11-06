@@ -9,6 +9,10 @@
     .event-teaser__background-element {
       left: 0;
       transform: scaleX(-1);
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
     }
   }
 
@@ -25,7 +29,7 @@
       max-width: 140rem;
       gap: 6rem;
 
-      @media (min-width: 850px) {
+      @media (min-width: 1025px) {
         transform: translateX(-10rem);
       }
 
@@ -37,8 +41,9 @@
         order: 1;
         justify-self: left;
     
-        @media (max-width: 850px) {
+        @media (max-width: 1024px) {
           place-self: center;
+          max-width: 100%;
         }
       }
     
@@ -46,6 +51,19 @@
         order: 2;
     
         @media (max-width: 850px) {
+          place-self: center;
+          text-align: center;
+        }
+      }
+
+      .event-teaser__content {
+        @media (max-width: 1024px) {
+          text-align: left;
+        }
+      }
+      
+      .event-teaser__heading {
+        @media (max-width: 1024px) {
           place-self: center;
           text-align: center;
         }
