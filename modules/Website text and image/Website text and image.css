@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .website-text-and-image {
   display: grid;
   place-content: center;
@@ -46,6 +47,7 @@
   font-style: normal;
   font-weight: 100;
   line-height: normal;
+  margin-bottom: 2.4rem;
 }
 @media (max-width: 850px) {
   .website-text-and-image__heading {
@@ -53,14 +55,41 @@
   }
 }
 .website-text-and-image__caption {
-  color: --color-paragraph;
-  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.website-text-and-image__caption p {
+  color: var(--color-paragraph);
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
 }
 @media (max-width: 850px) {
-  .website-text-and-image__caption {
+  .website-text-and-image__caption p {
     text-align: center;
   }
+}
+.website-text-and-image__caption p strong {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: normal;
+}
+.website-text-and-image__caption li {
+  list-style-type: none;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .website-text-and-image__caption li {
+    margin-left: 4rem;
+  }
+}
+.website-text-and-image__caption li:before {
+  content: "•";
+  font-size: 8.5rem;
+  position: absolute;
+  left: -2.5rem;
+  top: -5.2rem;
+  color: var(--color-blue); /* Change dot color to blue */
 }/*# sourceMappingURL=Website text and image.css.map */
