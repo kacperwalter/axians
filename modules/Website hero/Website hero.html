@@ -1,5 +1,18 @@
 <section class="website-hero">
+  <img src="{{ module.background_image.src }}" alt="" class="website-hero__background">
+
   <div class="website-hero__main">
-    
+    <header class="website-hero__header">
+      <h1 class="website-hero__heading">{{ module.heading }}</h1>
+      <h3 class="website-hero__subheading">{{ module.subheading }}</h3>
+    </header>
+
+    <p class="website-hero__caption">
+      {{ module.caption }}
+    </p>
+
+    <a href="{{ module.button.url.href }}" class="button button--primary">
+      {{ module.button.text }}
+    </a>
   </div>
 </section>

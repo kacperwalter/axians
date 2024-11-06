@@ -1,1 +1,62 @@
-/*# sourceMappingURL=Website hero.css.map */
+.website-hero {
+  position: relative;
+  display: grid;
+  place-content: center;
+  margin-bottom: 10rem;
+}
+.website-hero__background {
+  position: absolute;
+  top: 0;
+  max-height: 40rem;
+  width: 100%;
+  z-index: 0;
+}
+.website-hero__main {
+  z-index: 10;
+  max-width: 106rem;
+  background-color: white;
+  padding: 5rem 10rem;
+  text-align: center;
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.4rem;
+}
+@media (max-width: 900px) {
+  .website-hero__main {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+@media (max-width: 500px) {
+  .website-hero__main {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+.website-hero__main .button {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.website-hero__heading {
+  font-size: 5rem;
+  color: var(--color-brand);
+  margin: 0;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 2rem;
+}
+.website-hero__subheading {
+  font-size: 2.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.website-hero__caption {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  max-width: 58rem;
+}/*# sourceMappingURL=Website hero.css.map */
