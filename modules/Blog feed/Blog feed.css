@@ -38,6 +38,7 @@
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
 }
 @media (max-width: 1200px) {
   .blog-feed__listing {
