@@ -26,12 +26,36 @@
     font-weight: normal;
     font-size: 32px;
     font-weight: 300;
+    margin-bottom: 3rem;
   }
 
   &__caption {
     font-weight: 200;
-    margin-bottom: 40px;
     color: white;
+    margin-bottom: 3rem;
+
+    p, ul, li {
+      font-size: 1.8rem;
+      line-height: 120%;
+    }
+
+    ul {
+      margin-left: 2rem;
+    }
+
+    li {
+      list-style-type: none;
+      position: relative;
+
+      &:before {
+        content: "•";
+        font-size: 8rem;
+        position: absolute;
+        left: -2rem;
+        top: -0.5rem;
+        color: white;
+      }
+    }
   }
 
   &__button {

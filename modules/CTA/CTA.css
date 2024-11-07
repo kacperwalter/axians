@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .cta {
   color: white;
   margin-bottom: 10rem;
@@ -27,10 +28,30 @@
   font-weight: normal;
   font-size: 32px;
   font-weight: 300;
+  margin-bottom: 3rem;
 }
 .cta__caption {
   font-weight: 200;
-  margin-bottom: 40px;
+  color: white;
+  margin-bottom: 3rem;
+}
+.cta__caption p, .cta__caption ul, .cta__caption li {
+  font-size: 1.8rem;
+  line-height: 120%;
+}
+.cta__caption ul {
+  margin-left: 2rem;
+}
+.cta__caption li {
+  list-style-type: none;
+  position: relative;
+}
+.cta__caption li:before {
+  content: "•";
+  font-size: 8rem;
+  position: absolute;
+  left: -2rem;
+  top: -0.5rem;
   color: white;
 }
 .cta__button {
