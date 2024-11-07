@@ -95,8 +95,13 @@
     }
   }
 
-  &__event-points {
+  &__content {
     padding: 1rem 2rem 0rem 0rem;
+
+    h5 {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
   }
 
   &__event-point {

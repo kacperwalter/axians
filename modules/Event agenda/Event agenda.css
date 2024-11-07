@@ -86,8 +86,12 @@
 .agenda-item__time-and-name p {
   font-size: 1.4rem;
 }
-.agenda-item__event-points {
+.agenda-item__content {
   padding: 1rem 2rem 0rem 0rem;
+}
+.agenda-item__content h5 {
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 .agenda-item__event-point {
   margin: 0;
