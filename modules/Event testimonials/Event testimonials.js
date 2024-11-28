@@ -1,24 +1,41 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const testimonials = document.querySelectorAll("[data-testimonial]")
-  const prevButton = document.querySelector("[data-testimonials-prev]")
-  const nextButton = document.querySelector("[data-testimonials-next]")
-  let currentIndex = 0
+class EventTestimonials {
+  constructor(wrapper) {
+    this.wrapper = wrapper
+    this.testimonials = this.wrapper.querySelectorAll("[data-testimonial]")
+    this.prevButton = this.wrapper.querySelector("[data-testimonials-prev]")
+    this.nextButton = this.wrapper.querySelector("[data-testimonials-next]")
+    this.currentIndex = 0
 
-  function showTestimonial(index) {
-    testimonials.forEach((testimonial, i) => {
+    this.addListeners()
+    this.showTestimonial(this.currentIndex)
+  }
+
+  addListeners() {
+    if (this.prevButton) {
+      this.prevButton.addEventListener("click", () => {
+        this.currentIndex =
+          this.currentIndex > 0 ? this.currentIndex - 1 : this.testimonials.length - 1
+        this.showTestimonial(this.currentIndex)
+      })
+    }
+
+    if (this.nextButton) {
+      this.nextButton.addEventListener("click", () => {
+        this.currentIndex =
+          this.currentIndex < this.testimonials.length - 1 ? this.currentIndex + 1 : 0
+        this.showTestimonial(this.currentIndex)
+      })
+    }
+  }
+
+  showTestimonial(index) {
+    this.testimonials.forEach((testimonial, i) => {
       testimonial.classList.toggle("is-hidden", i !== index)
     })
   }
+}
 
-  prevButton.addEventListener("click", () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : testimonials.length - 1
-    showTestimonial(currentIndex)
-  })
-
-  nextButton.addEventListener("click", () => {
-    currentIndex = (currentIndex < testimonials.length - 1) ? currentIndex + 1 : 0
-    showTestimonial(currentIndex)
-  })
-
-  showTestimonial(currentIndex)
+document.addEventListener("DOMContentLoaded", () => {
+  const testimonialWrappers = document.querySelectorAll(".event-testimonials__wrapper")
+  testimonialWrappers.forEach((wrapper) => new EventTestimonials(wrapper))
 })
