@@ -47,6 +47,15 @@
     }
   }
 
+  &__caption {
+    font-size: 2rem;
+    font-weight: 100;
+
+    @media (max-width: 769px) {
+      text-align: center;
+    }
+  }
+
   &__element {
     font-size: 2rem;
     list-style-type: none;

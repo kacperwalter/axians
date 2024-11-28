@@ -3,11 +3,19 @@
     <div class="event-form__content">
       <h2 class="event-form__heading">{{ module.heading }}</h2>
   
-      <ul class="event-form__elements">
-        {% for element in module.elements %}
-          <li class="event-form__element">{{ element }}</li>
-        {% endfor %}
-      </ul>
+      {% if module.is_list %}
+        <ul class="event-form__elements">
+          {% for element in module.elements %}
+            <li class="event-form__element">{{ element }}</li>
+          {% endfor %}
+        </ul>
+
+        {% else %}
+
+        <div class="event-form__caption">
+          {{ module.caption }}
+        </div>
+      {% endif %}
     </div>
   
     <div class="event-form__form">

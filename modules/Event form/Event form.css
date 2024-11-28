@@ -49,6 +49,15 @@
     margin-bottom: 3rem;
   }
 }
+.event-form__caption {
+  font-size: 2rem;
+  font-weight: 100;
+}
+@media (max-width: 769px) {
+  .event-form__caption {
+    text-align: center;
+  }
+}
 .event-form__element {
   font-size: 2rem;
   list-style-type: none;
