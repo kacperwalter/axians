@@ -5,6 +5,10 @@
   place-content: center;
   margin-bottom: 10rem;
 }
+.event-form .grecaptcha-badge {
+  margin: 0;
+  margin-bottom: -15px;
+}
 @media (max-width: 769px) {
   .event-form__heading {
     text-align: center;

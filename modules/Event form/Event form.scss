@@ -4,6 +4,11 @@
   place-content: center;
   margin-bottom: 10rem;
 
+  .grecaptcha-badge {
+    margin: 0;
+    margin-bottom: -15px;
+  }
+
   &__heading {
     @media (max-width: 769px) {
       text-align: center;
