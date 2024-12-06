@@ -12,6 +12,7 @@
   max-width: 110rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 15rem;
 }
 @media (max-width: 1024px) {
   .website-extended-divider__wrapper {
@@ -30,6 +31,24 @@
 }
 .website-extended-divider__chart {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.website-extended-divider__row {
+  width: var(--row-width);
+  background-color: white;
+  color: #000349;
+  padding: 1.5rem 2.5rem;
+}
+.website-extended-divider__row-content {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.website-extended-divider__row-content span {
+  font-size: 2.6rem;
+  margin-right: 1rem;
 }
 .website-extended-divider__element1 {
   position: absolute;

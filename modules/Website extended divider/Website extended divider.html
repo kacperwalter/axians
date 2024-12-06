@@ -7,8 +7,8 @@
     {% if module.type.chart %}
       <div class="website-extended-divider__chart">
         {% for row in  module.chart_rows %}
-          <div class="website-extended-divider__row">
-            <p class="website-extended-divider__row-content">{{ row.row_value }}% {{ row.topic }}</p>
+          <div class="website-extended-divider__row" style="--row-width: {{ row.row_value }}%">
+            <p class="website-extended-divider__row-content"><span>{{ row.row_value }}%</span> {{ row.topic }}</p>
           </div>
         {% endfor %}
       </div>
