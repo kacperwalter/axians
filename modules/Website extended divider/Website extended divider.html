@@ -1,0 +1,17 @@
+<section class="website-extended-divider">
+  <div class="website-extended-divider__wrapper">
+    <h2 class="website-extended-divider__heading">
+      {{ module.heading }}
+    </h2>
+
+    {% if module.type.chart %}
+      <div class="website-extended-divider__chart">
+        {% for row in  module.chart_rows %}
+          <div class="website-extended-divider__row">
+            <p class="website-extended-divider__row-content">{{ row.row_value }}% {{ row.topic }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
