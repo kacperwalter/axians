@@ -1,0 +1,37 @@
+.website-hero-2 {
+  display: grid;
+  place-content: center;
+  margin-bottom: 10rem;
+  position: relative;
+
+  &__wrapper {
+    max-width: 110rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__main {
+    margin-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .button {
+      max-width: fit-content;
+    }
+  }
+
+  &__heading {
+    line-height: normal;
+    font-size: 4.5rem;
+    color: var(--color-blue);
+    margin: 0;
+  }
+
+  &__image {
+    position: absolute;
+    top: -70%;
+    right: 0;
+    width: 50%;
+  }
+}

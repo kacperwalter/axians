@@ -1,0 +1,33 @@
+.website-hero-2 {
+  display: grid;
+  place-content: center;
+  margin-bottom: 10rem;
+  position: relative;
+}
+.website-hero-2__wrapper {
+  max-width: 110rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.website-hero-2__main {
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.website-hero-2__main .button {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.website-hero-2__heading {
+  line-height: normal;
+  font-size: 4.5rem;
+  color: var(--color-blue);
+  margin: 0;
+}
+.website-hero-2__image {
+  position: absolute;
+  top: -70%;
+  right: 0;
+  width: 50%;
+}/*# sourceMappingURL=Website hero 2.css.map */
