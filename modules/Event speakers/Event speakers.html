@@ -3,16 +3,24 @@
 
   <div class="event-speakers__list">
     {% for speaker in module.speakers %}
-      <a class="speaker" href="{{ speaker.url.href }}">
-        <div class="speaker__circle-image">
-          <img src="{{ speaker.image.src }}" alt="{{ speaker.image.alt }}">
-        </div>
+      {% if speaker.url.href %}
+        <a class="speaker" href="{{ speaker.url.href }}">
+      {% else %}
+        <div class="speaker">
+      {% endif %}
+          <div class="speaker__circle-image">
+            <img src="{{ speaker.image.src }}" alt="{{ speaker.image.alt }}">
+          </div>
 
-        <div class="speaker__content">
-          <h4 class="speaker__name">{{ speaker.full_name }}</h4>
-          <p class="speaker__position">{{ speaker.position }}</p>
+          <div class="speaker__content">
+            <h4 class="speaker__name">{{ speaker.full_name }}</h4>
+            <p class="speaker__position">{{ speaker.position }}</p>
+          </div>
+      {% if speaker.url.href %}
+        </a>
+      {% else %}
         </div>
-      </a>
+      {% endif %}
     {% endfor %}
   </div>
 </section>
