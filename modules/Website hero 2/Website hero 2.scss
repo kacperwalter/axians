@@ -4,10 +4,24 @@
   margin-bottom: 10rem;
   position: relative;
 
+  @media (max-width: 1024px) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @media (max-width: 500px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   &__wrapper {
     max-width: 110rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media(max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__main {
@@ -15,6 +29,10 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @media(max-width: 768px) {
+      margin-top: 15rem;
+    }
 
     .button {
       max-width: fit-content;
@@ -32,6 +50,20 @@
     position: absolute;
     top: -70%;
     right: 0;
-    width: 50%;
+    width: 48%;
+
+    @media(max-width: 768px) {
+      top: -20%;
+      width: 60%;
+    }
+
+    @media(min-width: 769px) and (max-width: 1200px) {
+      top: -20%;
+    }
+
+    @media (min-width: 1500px) {
+      top: -90%;
+      width: 45%;
+    }
   }
 }
