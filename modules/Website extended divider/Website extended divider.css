@@ -28,6 +28,9 @@
 .website-extended-divider__heading {
   color: white;
 }
+.website-extended-divider__chart {
+  width: 100%;
+}
 .website-extended-divider__element1 {
   position: absolute;
   top: 0;
