@@ -5,12 +5,14 @@
   position: relative;
   height: 40.7rem;
   background-color: var(--color-blue);
+  overflow: hidden;
 
   &__wrapper {
     z-index: 10;
     width: 100%;
     max-width: 110rem;
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 15rem;
 
@@ -59,12 +61,41 @@
     top: 0;
     left: 0;
     z-index: 9;
+
+    
+    @media (max-width: 1919px) {
+      left: -10rem;
+    }
+
+    @media (max-width: 1350px) {
+      left: -42rem;
+    }
+
+    @media (max-width: 1024px) {
+      left: -54rem;
+    }
   }
 
   &__element2 {
     position: absolute;
     top: 0;
-    left: 60rem;
+    left: 96rem;
     z-index: 9;
+
+    @media (max-width: 1919px) {
+      left: 86rem;
+    }
+
+    @media (max-width: 1350px) {
+      left: 57rem;
+    }
+
+    @media (max-width: 1024px) {
+      left: 43rem;
+    }
+
+    @media (min-width: 1920px) {
+      left: 96rem;
+    }
   }
 }
