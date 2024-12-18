@@ -3,9 +3,18 @@
   place-content: center;
   margin-bottom: 10rem;
   position: relative;
-  height: 40.7rem;
   background-color: var(--color-blue);
   overflow: hidden;
+
+  @media (min-width: 500px) {
+    height: 40.7rem;
+  }
+
+
+  @media (max-width: 500px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 
   &__wrapper {
     z-index: 10;
@@ -24,11 +33,17 @@
     @media (max-width: 500px) {
       padding-left: 3rem;
       padding-right: 3rem;
+      grid-template-columns: 1fr;
+      gap: 0;
     }
   }
 
   &__heading {
     color: white;
+
+    @media (max-width: 500px) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__chart {
@@ -67,12 +82,20 @@
       left: -10rem;
     }
 
+    @media (max-width: 1600px) {
+      left: -33rem;
+    }
+
     @media (max-width: 1350px) {
       left: -42rem;
     }
 
     @media (max-width: 1024px) {
       left: -54rem;
+    }
+
+    @media (max-width: 500px) {
+      display: none;
     }
   }
 
@@ -86,6 +109,10 @@
       left: 86rem;
     }
 
+    @media (max-width: 1600px) {
+      left: 65rem;
+    }
+
     @media (max-width: 1350px) {
       left: 57rem;
     }
@@ -96,6 +123,10 @@
 
     @media (min-width: 1920px) {
       left: 96rem;
+    }
+    
+    @media (max-width: 500px) {
+      display: none;
     }
   }
 }
