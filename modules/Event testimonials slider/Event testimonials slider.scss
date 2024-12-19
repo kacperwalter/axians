@@ -27,9 +27,13 @@
   }
  }
 
- &__controls {
-  align-self: flex-end;
+ &__navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+ }
 
+ &__controls {
   button {
     border: none;
     background: none;

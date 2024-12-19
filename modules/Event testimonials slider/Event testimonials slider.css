@@ -29,8 +29,10 @@
     padding-right: 3rem;
   }
 }
-.event-testimonials-slider__controls {
-  align-self: flex-end;
+.event-testimonials-slider__navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .event-testimonials-slider__controls button {
   border: none;
