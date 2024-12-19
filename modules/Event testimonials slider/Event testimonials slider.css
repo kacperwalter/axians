@@ -4,6 +4,7 @@
   background-color: var(--color-gray);
   margin-bottom: 5rem;
   padding-bottom: 5rem;
+  overflow: hidden;
 }
 .event-testimonials-slider__wrapper {
   max-width: 110rem;
