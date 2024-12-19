@@ -76,11 +76,7 @@
     flex: 0 0 100%; /* Each testimonial occupies full width of the viewport */
     scroll-snap-align: start;
     max-width: 100%; /* Ensure it doesn't exceed the viewport width */
-
-    @media (min-width: 1024px) {
-      max-width: 80rem;
-    }
-
+    
     &__avatar {
       width: unset;
       align-self: flex-start;

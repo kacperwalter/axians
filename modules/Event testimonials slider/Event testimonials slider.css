@@ -74,11 +74,6 @@
   scroll-snap-align: start;
   max-width: 100%; /* Ensure it doesn't exceed the viewport width */
 }
-@media (min-width: 1024px) {
-  .event-testimonials-slider .testimonial {
-    max-width: 80rem;
-  }
-}
 .event-testimonials-slider .testimonial__avatar {
   width: unset;
   align-self: flex-start;

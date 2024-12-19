@@ -62,8 +62,9 @@ class EventTestimonialsSlider {
   }
 
   updateSliderPosition() {
-    const offset = -this.currentIndex * 100;
-    this.sliderInner.style.transform = `translateX(${offset}%)`;
+    const slideWidth = this.sliderWrapper.clientWidth;
+    const offset = -this.currentIndex * slideWidth;
+    this.sliderInner.style.transform = `translateX(${offset}px)`;
   }
 
   updateProgressBar() {
