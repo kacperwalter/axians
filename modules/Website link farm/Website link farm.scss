@@ -1,8 +1,10 @@
 .website-link-farm {
-  display: grid;
-  place-content: center;
+  display: flex; /* Switch to flexbox for better layout control */
+  justify-content: center; /* Center the wrapper horizontally */
+  align-items: center; /* Center the wrapper vertically */
   margin-bottom: 10rem;
   position: relative;
+  min-height: 10rem; /* Optional: Add a minimum height to avoid collapse when empty */
 
   @media (max-width: 1024px) {
     padding-left: 5rem;
@@ -15,12 +17,14 @@
   }
 
   &__wrapper {
-    max-width: 110rem;
+    width: 110rem; /* Ensure the wrapper always has this width */
+    max-width: 100%; /* Prevent it from exceeding the screen width */
     display: grid;
   }
 
   &__links {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
   }
 
@@ -31,5 +35,13 @@
     border-radius: 8px;
     padding: 1rem 2rem;
     font-size: 2rem;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+
+  &__link:hover {
+    background-color: var(--color-brand); /* Change background to the brand color */
+    color: white; /* Change text color to white */
+    border-color: var(--color-brand-dark); /* Darker shade for the border on hover */
+    transform: scale(1.05); /* Slight zoom effect */
   }
 }
