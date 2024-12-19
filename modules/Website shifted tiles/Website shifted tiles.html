@@ -1,0 +1,21 @@
+<section class="website-shifted-tiles">
+  <div class="website-shifted-tiles__wrapper">
+    <div class="website-shifted-tiles__info">
+      <h1 class="website-shifted-tiles__heading">{{ module.heading }}</h1>
+
+      <a href="{{ module.button.url.href }}" class="website-shifted-tiles__link">
+        {{ module.button.text }}
+      </a>
+    </div>
+
+    <div class="website-shifted-tiles__tiles">
+      {% for tile in module.tiles %}
+        <article class="shifted-tile">
+          <h3 class="shifted-tile__heading">{{ tile.heading }}</h3>
+          <p class="shifted-tile__info">{{ tile.info }}</p>
+          <a href="{{ tile.url.href }}" class="website-shifted-tiles__link">Więcej →</a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
