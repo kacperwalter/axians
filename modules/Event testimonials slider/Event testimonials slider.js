@@ -1,7 +1,8 @@
 class EventTestimonialsSlider {
   constructor(wrapper) {
     this.wrapper = wrapper;
-    this.slider = this.wrapper.querySelector(".event-testimonials-slider__wrapper");
+    this.sliderWrapper = this.wrapper.querySelector(".event-testimonials-slider__wrapper");
+    this.sliderInner = this.wrapper.querySelector(".event-testimonials-slider__inner");
     this.testimonials = Array.from(this.wrapper.querySelectorAll(".testimonial"));
     this.prevButton = this.wrapper.querySelector("[data-testimonials-prev]");
     this.nextButton = this.wrapper.querySelector("[data-testimonials-next]");
@@ -20,12 +21,9 @@ class EventTestimonialsSlider {
   }
 
   setSliderStyles() {
-    // Set up the slider for side-by-side layout
-    this.slider.style.display = "flex";
-    this.slider.style.transition = "transform 0.4s ease-in-out";
-
+    // Each slide should already be full width in CSS.
     this.testimonials.forEach((testimonial) => {
-      testimonial.style.flex = "0 0 100%"; // Each slide takes full width of the container
+      testimonial.style.flex = "0 0 100%";
     });
   }
 
@@ -47,7 +45,7 @@ class EventTestimonialsSlider {
     if (this.currentIndex > 0) {
       this.currentIndex -= 1;
     } else {
-      this.currentIndex = this.testimonialCount - 1; // Loop back to the last slide
+      this.currentIndex = this.testimonialCount - 1;
     }
     this.updateSliderPosition();
     this.updateProgressBar();
@@ -57,17 +55,15 @@ class EventTestimonialsSlider {
     if (this.currentIndex < this.testimonialCount - 1) {
       this.currentIndex += 1;
     } else {
-      this.currentIndex = 0; // Loop back to the first slide
+      this.currentIndex = 0;
     }
     this.updateSliderPosition();
     this.updateProgressBar();
   }
 
   updateSliderPosition() {
-    // Adjust the offset if needed. Currently each slide is 100% width, 
-    // so translating by 100% per slide might be what you want.
     const offset = -this.currentIndex * 100;
-    this.slider.style.transform = `translateX(${offset}%)`;
+    this.sliderInner.style.transform = `translateX(${offset}%)`;
   }
 
   updateProgressBar() {
@@ -76,30 +72,21 @@ class EventTestimonialsSlider {
       const totalLabel = this.progressBar.querySelector("[data-progress-bar-all]");
       const filledLine = this.progressBar.querySelector(".progress-bar__line-filled");
       const dot = this.progressBar.querySelector(".progress-bar__dot");
-  
-      // Update numbers
+
       if (currentLabel) currentLabel.textContent = String(this.currentIndex + 1).padStart(2, "0");
       if (totalLabel) totalLabel.textContent = String(this.testimonialCount).padStart(2, "0");
-  
-      // Calculate progress as a percentage of how far along we are
+
       const progress = this.testimonialCount > 1
         ? (this.currentIndex / (this.testimonialCount - 1)) * 100
         : 0;
-  
-      // Update the line and dot positions
-      if (filledLine) {
-        filledLine.style.width = progress + "%";
-      }
-  
-      if (dot) {
-        dot.style.left = progress + "%";
-      }
-  
-      // Change the colors when on the last slide
-      if (this.currentIndex === this.testimonialCount - 1) {
-        if (totalLabel) totalLabel.style.color = "var(--color-brand)";
-      } else {
-        if (totalLabel) totalLabel.style.color = "var(--color-brand-light)";
+
+      if (filledLine) filledLine.style.width = `${progress}%`;
+      if (dot) dot.style.left = `${progress}%`;
+
+      if (this.currentIndex === this.testimonialCount - 1 && totalLabel) {
+        totalLabel.style.color = "var(--color-brand)";
+      } else if (totalLabel) {
+        totalLabel.style.color = "var(--color-brand-light)";
       }
     }
   }

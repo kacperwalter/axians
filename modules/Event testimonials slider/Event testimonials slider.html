@@ -1,19 +1,21 @@
 <section class="event-testimonials-slider">
   <div class="event-testimonials-slider__wrapper">
-    {% for testimonial in module.testimonials %}
-      <article class="testimonial">
-        <img src="{{ testimonial.avatar.src }}" alt="{{ testimonial.avatar.alt }}" class="testimonial__avatar">
-        <div class="testimonial__content">
-          <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/quote.svg" alt="quote icon" class="testimonial__quote-icon">
-          <p class="testimonial__quote">{{ testimonial.quote }}</p>
+    <div class="event-testimonials-slider__inner">
+      {% for testimonial in module.testimonials %}
+        <article class="testimonial">
+          <img src="{{ testimonial.avatar.src }}" alt="{{ testimonial.avatar.alt }}" class="testimonial__avatar">
+          <div class="testimonial__content">
+            <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/quote.svg" alt="quote icon" class="testimonial__quote-icon">
+            <p class="testimonial__quote">{{ testimonial.quote }}</p>
 
-          <div class="testimonial__person">
-            <h4 class="testimonial__person-name">{{ testimonial.full_name }}</h4>
-            <p class="testimonial__person-position">{{ testimonial.position }}</p>
+            <div class="testimonial__person">
+              <h4 class="testimonial__person-name">{{ testimonial.full_name }}</h4>
+              <p class="testimonial__person-position">{{ testimonial.position }}</p>
+            </div>
           </div>
-        </div>
-      </article>
-    {% endfor %}
+        </article>
+      {% endfor %}
+    </div>
   </div>
 
   {% if module.testimonials|length > 1 %}
@@ -29,7 +31,7 @@
           <p data-progress-bar-all>01</p>
         </div>
       </div>
-    
+
       <div class="event-testimonials-slider__controls">
         <button class="event-testimonials-slider__prev" data-testimonials-prev>
           <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-left.svg" alt="">
