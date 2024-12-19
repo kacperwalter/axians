@@ -1,0 +1,116 @@
+.event-testimonials-slider {
+  display: grid;
+  place-content: center;
+  background-color: var(--color-gray);
+  margin-bottom: 5rem;
+}
+.event-testimonials-slider__wrapper {
+  max-width: 110rem;
+  padding-top: 12rem;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .event-testimonials-slider__wrapper {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .event-testimonials-slider__wrapper {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (max-width: 850px) {
+  .event-testimonials-slider__wrapper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.event-testimonials-slider__controls {
+  align-self: flex-end;
+}
+.event-testimonials-slider__controls button {
+  border: none;
+  background: none;
+  font-size: 3rem;
+  color: #656565;
+}
+.event-testimonials-slider__controls button:hover {
+  background-color: beige;
+}
+.event-testimonials-slider__controls button img {
+  height: 2rem;
+}
+.event-testimonials-slider__prev {
+  margin-right: 1rem;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+@media (max-width: 767px) {
+  .testimonial {
+    flex-direction: column;
+  }
+}
+.testimonial__avatar {
+  width: 10rem;
+  align-self: flex-start;
+  margin-top: 3rem;
+}
+@media (max-width: 767px) {
+  .testimonial__avatar {
+    margin-top: 0;
+  }
+}
+.testimonial__content {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  row-gap: 4rem;
+}
+@media (max-width: 767px) {
+  .testimonial__content {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+}
+.testimonial__quote-icon {
+  grid-column: 1;
+}
+.testimonial__quote {
+  grid-column: 2/span 4;
+  font-weight: 100;
+  font-size: 2rem;
+}
+@media (max-width: 767px) {
+  .testimonial__quote {
+    grid-column: 1;
+  }
+}
+.testimonial__person {
+  grid-column: 2;
+}
+@media (max-width: 767px) {
+  .testimonial__person {
+    grid-column: 1;
+  }
+}
+.testimonial__person-name {
+  margin: 0;
+  font-size: 3.2rem;
+  font-weight: 100;
+}
+.testimonial__person-position {
+  color: var(--color-brand);
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+.testimonial.is-hidden {
+  display: none;
+}/*# sourceMappingURL=Event testimonials slider.css.map */
