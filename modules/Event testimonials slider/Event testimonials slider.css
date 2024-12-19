@@ -37,6 +37,18 @@
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 767px) {
+  .event-testimonials-slider__navigation {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .event-testimonials-slider__navigation {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
 .event-testimonials-slider__controls button {
   border: none;
   background: none;
