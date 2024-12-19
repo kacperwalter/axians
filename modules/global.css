@@ -73,10 +73,60 @@ em {
 
 .progress-bar {
   display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-.progress-bar [data-progress-bar-current] {
+
+[data-progress-bar-current],
+[data-progress-bar-all] {
+  font-weight: bold;
+}
+
+[data-progress-bar-current] {
   color: var(--color-brand);
 }
-.progress-bar [data-progress-bar-all] {
+
+[data-progress-bar-all] {
   color: var(--color-brand-light);
+}
+
+.progress-bar__bar {
+  position: relative;
+  width: 150px; /* adjust as needed */
+  height: 4px; /* adjust as needed */
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar__line-bg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-brand-light);
+  border-radius: 2px;
+}
+
+.progress-bar__line-filled {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  background-color: var(--color-brand);
+  width: 0%;
+  border-radius: 2px;
+  transition: width 0.4s ease-in-out;
+}
+
+.progress-bar__dot {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  transition: left 0.4s ease-in-out;
+  width: 12px; /* adjust if needed */
+  height: 12px; /* adjust if needed */
 }/*# sourceMappingURL=global.css.map */
