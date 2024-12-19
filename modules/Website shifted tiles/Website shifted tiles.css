@@ -33,15 +33,24 @@
 @media (max-width: 768px) {
   .website-shifted-tiles__wrapper {
     grid-template-columns: 1fr; /* One column for mobile */
+    gap: 2rem;
   }
 }
 .website-shifted-tiles__info {
   display: grid;
   place-content: center;
 }
+@media (max-width: 1024px) {
+  .website-shifted-tiles__info {
+    position: sticky;
+    top: 15rem; /* Adjust as needed to avoid overlap with headers */
+    align-self: start; /* Ensures it stays at the top */
+  }
+}
 @media (max-width: 768px) {
   .website-shifted-tiles__info {
     margin-bottom: 3rem;
+    position: static; /* Reverts sticky behavior for mobile */
   }
 }
 .website-shifted-tiles__link {

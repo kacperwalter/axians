@@ -21,6 +21,7 @@
     max-width: 110rem;
     display: grid;
     grid-template-columns: 1fr 2fr; /* Two columns for desktop */
+    gap: 6rem;
 
     @media (max-width: 1024px) {
       grid-template-columns: 1fr 1fr; /* Two columns for tablet */
@@ -28,17 +29,23 @@
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr; /* One column for mobile */
+      gap: 2rem;
     }
-    
-    gap: 6rem;
   }
 
   &__info {
     display: grid;
     place-content: center;
 
+    @media (max-width: 1024px) {
+      position: sticky;
+      top: 15rem; /* Adjust as needed to avoid overlap with headers */
+      align-self: start; /* Ensures it stays at the top */
+    }
+
     @media (max-width: 768px) {
       margin-bottom: 3rem;
+      position: static; /* Reverts sticky behavior for mobile */
     }
   }
 
