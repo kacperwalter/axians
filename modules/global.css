@@ -31,6 +31,7 @@
 :root {
   --color-gray: #F7F7F7;
   --color-brand: #A20067;
+  --color-brand-light: #E0AFCB;
   --color-blue: #1354A9;
   --color-paragraph: #4F4F4F;
 }
@@ -68,4 +69,14 @@ em {
 
 .overlay-content p {
   color: white;
+}
+
+.progress-bar {
+  display: flex;
+}
+.progress-bar [data-progress-bar-current] {
+  color: var(--color-brand);
+}
+.progress-bar [data-progress-bar-all] {
+  color: var(--color-brand-light);
 }/*# sourceMappingURL=global.css.map */
