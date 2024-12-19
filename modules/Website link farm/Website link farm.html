@@ -1,0 +1,13 @@
+<section class="website-link-farm">
+  <div class="website-link-farm__wrapper">
+    <h1 class="website-link-farm__heading">{{ module.heading }}</h1>
+
+    <div class="website-link-farm__links">
+      {% for link in module.links %}
+        <a href="{{ link.url.href }}" class="website-link-farm__link">
+          {{ link.text }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

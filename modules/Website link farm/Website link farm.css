@@ -1,0 +1,34 @@
+.website-link-farm {
+  display: grid;
+  place-content: center;
+  margin-bottom: 10rem;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .website-link-farm {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (max-width: 500px) {
+  .website-link-farm {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.website-link-farm__wrapper {
+  max-width: 110rem;
+  display: grid;
+}
+.website-link-farm__links {
+  display: flex;
+  gap: 2rem;
+}
+.website-link-farm__link {
+  text-decoration: none;
+  border: 1.5px solid var(--color-brand);
+  color: var(--color-brand);
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}/*# sourceMappingURL=Website link farm.css.map */
