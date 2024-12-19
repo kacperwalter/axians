@@ -14,23 +14,23 @@
         </div>
       </article>
     {% endfor %}
-
-    {% if module.testimonials|length > 1 %}
-      <div class="event-testimonials-slider__navigation">
-        <div class="event-testimonials-slider__navigation-progress">
-          progress bar
-        </div>
-
-        <div class="event-testimonials-slider__controls">
-          <button class="event-testimonials-slider__prev" data-testimonials-prev>
-            <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-left.svg" alt="">
-          </button>
-          
-          <button class="event-testimonials-slider__next" data-testimonials-next>
-            <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/ARROW-right.svg" alt="">
-          </button>
-        </div>
-      </div>
-    {% endif %}
   </div>
+
+  {% if module.testimonials|length > 1 %}
+    <div class="event-testimonials-slider__navigation">
+      <div class="event-testimonials-slider__navigation-progress">
+        progress bar
+      </div>
+
+      <div class="event-testimonials-slider__controls">
+        <button class="event-testimonials-slider__prev" data-testimonials-prev>
+          <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-left.svg" alt="">
+        </button>
+        
+        <button class="event-testimonials-slider__next" data-testimonials-next>
+          <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/ARROW-right.svg" alt="">
+        </button>
+      </div>
+    </div>
+  {% endif %}
 </section>
