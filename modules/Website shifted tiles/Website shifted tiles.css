@@ -65,10 +65,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns for desktop */
   gap: 2rem;
+  padding-bottom: 6rem; /* Add extra padding to account for the shifted effect */
+  /* Shift the second column on desktop */
 }
 @media (max-width: 1024px) {
   .website-shifted-tiles__tiles {
     grid-template-columns: 1fr; /* One column for tablet and mobile */
+  }
+}
+.website-shifted-tiles__tiles .shifted-tile:nth-child(2n) {
+  transform: translateY(6rem);
+}
+@media (max-width: 1024px) {
+  .website-shifted-tiles__tiles .shifted-tile:nth-child(2n) {
+    transform: none; /* Reset for tablet and mobile */
   }
 }
 

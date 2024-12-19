@@ -68,6 +68,16 @@
     }
 
     gap: 2rem;
+    padding-bottom: 6rem; /* Add extra padding to account for the shifted effect */
+
+    /* Shift the second column on desktop */
+    .shifted-tile:nth-child(2n) {
+      transform: translateY(6rem);
+
+      @media (max-width: 1024px) {
+        transform: none; /* Reset for tablet and mobile */
+      }
+    }
   }
 }
 
