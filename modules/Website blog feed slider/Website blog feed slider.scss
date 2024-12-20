@@ -1,0 +1,102 @@
+.blog-feed-slider {
+  display: grid;
+  place-content: center;
+  background-color: var(--color-gray);
+  margin-bottom: 5rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+
+  &__wrapper {
+    max-width: 110rem;
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+    position: relative;
+
+    @media (max-width: 1024px) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+      overflow: hidden; /* This acts as the viewport now */
+    }
+
+    @media (max-width: 850px) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    @media (max-width: 767px) {
+      padding-top: 6rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    gap: 6rem;
+    transition: transform 0.4s ease-in-out; /* For sliding the track */
+
+    @media (max-width: 767px) {
+      gap: 2rem;
+    }
+  }
+
+  &__navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1024px) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    @media (max-width: 767px) {
+      gap: 2rem;
+    }
+  }
+
+  &__controls {
+    button {
+      border: none;
+      background: none;
+      font-size: 3rem;
+      color: #656565;
+
+      &:hover {
+        background-color: beige;
+      }
+
+      img {
+        height: 2rem;
+      }
+    }
+
+  }
+
+  .testimonial {
+    flex: 0 0 100%; /* Each testimonial occupies full width of the viewport */
+    scroll-snap-align: start;
+    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    
+    &__avatar {
+      width: unset;
+      align-self: flex-start;
+      margin-top: unset;
+      height: 100%;
+
+      @media (max-width: 767px) {
+        margin-top: 0;
+      }
+    }
+
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 10fr;
+      gap: 1rem;
+
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+      }
+    }
+  }
+}

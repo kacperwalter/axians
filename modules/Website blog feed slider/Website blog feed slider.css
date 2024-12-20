@@ -1,0 +1,98 @@
+.blog-feed-slider {
+  display: grid;
+  place-content: center;
+  background-color: var(--color-gray);
+  margin-bottom: 5rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+.blog-feed-slider__wrapper {
+  max-width: 110rem;
+  padding-top: 12rem;
+  padding-bottom: 10rem;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .blog-feed-slider__wrapper {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    overflow: hidden; /* This acts as the viewport now */
+  }
+}
+@media (max-width: 850px) {
+  .blog-feed-slider__wrapper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .blog-feed-slider__wrapper {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+  }
+}
+.blog-feed-slider__inner {
+  display: flex;
+  gap: 6rem;
+  transition: transform 0.4s ease-in-out; /* For sliding the track */
+}
+@media (max-width: 767px) {
+  .blog-feed-slider__inner {
+    gap: 2rem;
+  }
+}
+.blog-feed-slider__navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .blog-feed-slider__navigation {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (max-width: 767px) {
+  .blog-feed-slider__navigation {
+    gap: 2rem;
+  }
+}
+.blog-feed-slider__controls button {
+  border: none;
+  background: none;
+  font-size: 3rem;
+  color: #656565;
+}
+.blog-feed-slider__controls button:hover {
+  background-color: beige;
+}
+.blog-feed-slider__controls button img {
+  height: 2rem;
+}
+.blog-feed-slider .testimonial {
+  flex: 0 0 100%; /* Each testimonial occupies full width of the viewport */
+  scroll-snap-align: start;
+  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+}
+.blog-feed-slider .testimonial__avatar {
+  width: unset;
+  align-self: flex-start;
+  margin-top: unset;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .blog-feed-slider .testimonial__avatar {
+    margin-top: 0;
+  }
+}
+.blog-feed-slider .testimonial__content {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  gap: 1rem;
+}
+@media (max-width: 767px) {
+  .blog-feed-slider .testimonial__content {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+}/*# sourceMappingURL=Website blog feed slider.css.map */

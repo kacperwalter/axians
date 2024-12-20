@@ -1,0 +1,37 @@
+<section class="blog-feed-slider">
+  <div class="blog-feed-slider__wrapper">
+    <div class="blog-feed-slider__inner">
+      {% for testimonial in module.testimonials %}
+        <article class="testimonial">
+          blog feed article
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if module.testimonials|length > 1 %}
+    <div class="blog-feed-slider__navigation">
+      <div class="blog-feed-slider__navigation-progress">
+        <div class="progress-bar">
+          <p data-progress-bar-current>01</p>
+          <div class="progress-bar__bar">
+            <div class="progress-bar__line-bg"></div>
+            <div class="progress-bar__line-filled"></div>
+            <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/dot.svg" alt="dot" class="progress-bar__dot">
+          </div>
+          <p data-progress-bar-all>01</p>
+        </div>
+      </div>
+
+      <div class="blog-feed-slider__controls">
+        <button class="blog-feed-slider__prev" data-testimonials-prev>
+          <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-left.svg" alt="">
+        </button>
+        
+        <button class="blog-feed-slider__next" data-testimonials-next>
+          <img src="https://it.axians-it.pl/hubfs/landing-pages-assets/ARROW-right.svg" alt="">
+        </button>
+      </div>
+    </div>
+  {% endif %}
+</section>
