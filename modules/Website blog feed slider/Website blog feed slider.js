@@ -3,7 +3,7 @@ class BlogFeedSlider {
     this.wrapper = wrapper;
     this.sliderWrapper = this.wrapper.querySelector(".blog-feed-slider__wrapper");
     this.sliderInner = this.wrapper.querySelector(".blog-feed-slider__inner");
-    this.slides = Array.from(this.wrapper.querySelectorAll(".testimonial"));
+    this.slides = Array.from(this.wrapper.querySelectorAll(".post"));
     this.prevButton = this.wrapper.querySelector("[data-testimonials-prev]");
     this.nextButton = this.wrapper.querySelector("[data-testimonials-next]");
     this.progressBar = this.wrapper.querySelector(".blog-feed-slider__navigation-progress");

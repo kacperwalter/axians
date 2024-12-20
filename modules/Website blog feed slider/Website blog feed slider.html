@@ -1,15 +1,13 @@
 <section class="blog-feed-slider">
-  <div class="blog-feed-slider__wrapper">
-    <div class="blog-feed-slider__inner">
-      {% for testimonial in module.testimonials %}
-        <article class="testimonial">
-          blog feed article
-        </article>
-      {% endfor %}
-    </div>
+  <div class="blog-feed-slider__header">
+      <h2 class="blog-feed-slider__heading">
+        {{ module.heading }}
+      </h2>
+
+      <a href="https://www.axians.pl/blog" class="blog-feed-slider__link">→ Odwiedź naszego bloga</a>
   </div>
 
-  {% if module.testimonials|length > 1 %}
+  {% if module.posts|length > 1 %}
     <div class="blog-feed-slider__navigation">
       <div class="blog-feed-slider__navigation-progress">
         <div class="progress-bar">
@@ -34,4 +32,17 @@
       </div>
     </div>
   {% endif %}
+
+  <div class="blog-feed-slider__wrapper">
+    <div class="blog-feed-slider__inner">
+      {% for post in module.posts %}
+        <article class="post">
+          <img src="{{ post.image.src }}" alt="{{ post.image.alt }}" style="display: block; border: 0;"/>
+          <p class="post__date">{{ post.date }}</p>
+          <h4 class="post__heading">{{ post.heading }}</h4>
+          <a href="{{ post.url.href }}">→ Dowiedz się więcej</a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
 </section>

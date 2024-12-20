@@ -5,11 +5,40 @@
   margin-bottom: 5rem;
   padding-bottom: 5rem;
   overflow: hidden;
+  padding-top: 5rem;
+
+  &__header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+      overflow: hidden; /* This acts as the viewport now */
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 850px) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 10rem;
+    }
+  }
+
+  &__link {
+    color: var(--color-brand);
+    text-decoration: none;
+  }
 
   &__wrapper {
     max-width: 110rem;
-    padding-top: 12rem;
-    padding-bottom: 10rem;
+    padding-top: 7rem;
     position: relative;
 
     @media (max-width: 1024px) {
@@ -72,30 +101,31 @@
 
   }
 
-  .testimonial {
+  .post {
     flex: 0 0 100%; /* Each testimonial occupies full width of the viewport */
     scroll-snap-align: start;
-    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
-    
-    &__avatar {
-      width: unset;
-      align-self: flex-start;
-      margin-top: unset;
-      height: 100%;
+    max-width: 26rem;
 
-      @media (max-width: 767px) {
-        margin-top: 0;
-      }
+    img {
+      margin-bottom: 1rem;
     }
 
-    &__content {
-      display: grid;
-      grid-template-columns: 1fr 10fr;
-      gap: 1rem;
+    &__date {
+      font-size: 1.5rem;
+      color: #ADADAD;
+    }
 
-      @media (max-width: 767px) {
-        grid-template-columns: 1fr;
-        row-gap: 2rem;
+    &__heading {
+      font-weight: bold;
+      font-size: 1.7rem;
+    }
+
+    a {
+      color: var(--color-brand);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }

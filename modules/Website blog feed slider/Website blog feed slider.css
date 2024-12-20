@@ -5,11 +5,41 @@
   margin-bottom: 5rem;
   padding-bottom: 5rem;
   overflow: hidden;
+  padding-top: 5rem;
+}
+.blog-feed-slider__header {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .blog-feed-slider__header {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    overflow: hidden; /* This acts as the viewport now */
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 850px) {
+  .blog-feed-slider__header {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .blog-feed-slider__header {
+    gap: 10rem;
+  }
+}
+.blog-feed-slider__link {
+  color: var(--color-brand);
+  text-decoration: none;
 }
 .blog-feed-slider__wrapper {
   max-width: 110rem;
-  padding-top: 12rem;
-  padding-bottom: 10rem;
+  padding-top: 7rem;
   position: relative;
 }
 @media (max-width: 1024px) {
@@ -69,30 +99,26 @@
 .blog-feed-slider__controls button img {
   height: 2rem;
 }
-.blog-feed-slider .testimonial {
+.blog-feed-slider .post {
   flex: 0 0 100%; /* Each testimonial occupies full width of the viewport */
   scroll-snap-align: start;
-  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+  max-width: 26rem;
 }
-.blog-feed-slider .testimonial__avatar {
-  width: unset;
-  align-self: flex-start;
-  margin-top: unset;
-  height: 100%;
+.blog-feed-slider .post img {
+  margin-bottom: 1rem;
 }
-@media (max-width: 767px) {
-  .blog-feed-slider .testimonial__avatar {
-    margin-top: 0;
-  }
+.blog-feed-slider .post__date {
+  font-size: 1.5rem;
+  color: #ADADAD;
 }
-.blog-feed-slider .testimonial__content {
-  display: grid;
-  grid-template-columns: 1fr 10fr;
-  gap: 1rem;
+.blog-feed-slider .post__heading {
+  font-weight: bold;
+  font-size: 1.7rem;
 }
-@media (max-width: 767px) {
-  .blog-feed-slider .testimonial__content {
-    grid-template-columns: 1fr;
-    row-gap: 2rem;
-  }
+.blog-feed-slider .post a {
+  color: var(--color-brand);
+  text-decoration: none;
+}
+.blog-feed-slider .post a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=Website blog feed slider.css.map */
