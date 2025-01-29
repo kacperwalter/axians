@@ -21,8 +21,9 @@ class BlogFeedSlider {
   }
 
   setSliderStyles() {
+    // Usuwamy wymuszanie 100% szerokości
     this.slides.forEach((slide) => {
-      slide.style.flex = "0 0 100%";
+      slide.style.flex = "0 0 auto"; // Automatyczna szerokość
     });
   }
 
@@ -61,8 +62,17 @@ class BlogFeedSlider {
   }
 
   updateSliderPosition() {
-    const slideWidth = this.sliderWrapper.clientWidth;
-    const offset = -this.currentIndex * slideWidth;
+    // Pobierz szerokość pojedynczego slajdu
+    const slideWidth = this.slides[0].offsetWidth;
+  
+    // Uwzględnij odstęp (gap) między slajdami
+    const sliderStyles = window.getComputedStyle(this.sliderInner);
+    const gap = parseFloat(sliderStyles.gap) || 0;
+  
+    // Przesunięcie: indeks * (szerokość slajdu + gap)
+    const offset = -(this.currentIndex * (slideWidth + gap));
+  
+    // Przesuń slider
     this.sliderInner.style.transform = `translateX(${offset}px)`;
   }
 

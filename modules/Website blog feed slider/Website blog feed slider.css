@@ -37,9 +37,12 @@
   color: var(--color-brand);
   text-decoration: none;
 }
+.blog-feed-slider__link:hover {
+  text-decoration: underline;
+}
 .blog-feed-slider__wrapper {
   max-width: 110rem;
-  padding-top: 7rem;
+  padding-top: 2rem;
   position: relative;
 }
 @media (max-width: 1024px) {
@@ -100,7 +103,7 @@
   height: 2rem;
 }
 .blog-feed-slider .post {
-  flex: 0 0 100%; /* Each testimonial occupies full width of the viewport */
+  flex: 0 0 auto; /* Each testimonial occupies full width of the viewport */
   scroll-snap-align: start;
   max-width: 26rem;
 }
