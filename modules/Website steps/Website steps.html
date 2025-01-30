@@ -1,0 +1,13 @@
+<section class="website-steps">
+  <div class="website-steps__wrapper">
+    <h2 class="website-steps__heading">{{ module.heading }}</h2>
+
+    <ul class="website-steps__steps">
+     {% for step in module.steps %}
+        <li class="step">
+            <span class="step__index">{{ loop.index }}</span> {{ step }}
+        </li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
