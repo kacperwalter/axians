@@ -23,6 +23,11 @@
     padding-right: 3rem;
   }
 }
+@media (max-width: 769px) {
+  .website-steps__heading {
+    text-align: center;
+  }
+}
 .website-steps__steps {
   list-style-type: none;
   display: grid;

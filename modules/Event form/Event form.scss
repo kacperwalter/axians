@@ -11,7 +11,7 @@
 
   &__heading {
     @media (max-width: 769px) {
-      text-align: center;
+      // text-align: center;
     }
   }
 
@@ -68,7 +68,7 @@
     position: relative;
 
     @media (max-width: 769px) {
-      text-align: center;
+      // text-align: center;
     }
 
     &:before {
@@ -112,6 +112,10 @@
       span {
         margin-left: 2rem;
       }
+    }
+
+    .hs-form-required {
+      margin-left: 0 !important;
     }
 
     .hs-button {

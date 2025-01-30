@@ -9,11 +9,6 @@
   margin: 0;
   margin-bottom: -15px;
 }
-@media (max-width: 769px) {
-  .event-form__heading {
-    text-align: center;
-  }
-}
 .event-form__wrapper {
   max-width: 110rem;
   display: grid;
@@ -68,11 +63,6 @@
   font-weight: 100;
   position: relative;
 }
-@media (max-width: 769px) {
-  .event-form__element {
-    text-align: center;
-  }
-}
 .event-form__element:before {
   content: "•";
   font-size: 8rem;
@@ -113,6 +103,9 @@
 .event-form__form .hs-form-booleancheckbox-display span,
 .event-form__form .hs-form-booleancheckbox p span {
   margin-left: 2rem;
+}
+.event-form__form .hs-form-required {
+  margin-left: 0 !important;
 }
 .event-form__form .hs-button {
   padding: 1.5rem 4rem;

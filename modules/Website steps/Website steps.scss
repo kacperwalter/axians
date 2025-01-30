@@ -22,6 +22,12 @@
     }
   }
 
+  &__heading {
+    @media (max-width: 769px) {
+      text-align: center;
+    }
+  }
+
   &__steps {
     list-style-type: none;
     display: grid;
