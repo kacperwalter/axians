@@ -72,12 +72,12 @@
 .website-extended-divider__element1 {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -2.5rem;
   z-index: 9;
 }
 @media (max-width: 1919px) {
   .website-extended-divider__element1 {
-    left: -10rem;
+    left: -13rem;
   }
 }
 @media (max-width: 1600px) {
