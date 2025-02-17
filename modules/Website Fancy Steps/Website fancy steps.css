@@ -28,10 +28,20 @@
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; /* Ensure spacing is consistent */
+}
+.website-fancy-steps .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .website-fancy-steps .step .step-box {
   max-width: 26rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1; /* Ensures all step-boxes grow equally */
 }
 .website-fancy-steps .step .step-box__number {
   position: absolute;
@@ -57,4 +67,8 @@
   background-color: white;
   border: 1.5px solid var(--color-brand);
   border-radius: 8px;
+  flex-grow: 1; /* Ensures all text boxes have the same height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=Website fancy steps.css.map */
