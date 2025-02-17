@@ -1,0 +1,20 @@
+{% set image_url = module.background_image.src %}
+
+<section class="website-hero-3">
+  <div class="website-hero-3__wrapper">
+    <div class="website-hero-3__main">
+      <header class="website-hero-3__header">
+        <h1 class="website-hero-3__heading">{{ module.heading }}</h1>
+        <p class="website-hero-3__caption">{{ module.caption }}</p>
+      </header>
+      
+      <a href="{{ module.button.url.href }}" class="button button--primary">
+        {{ module.button.text }}
+      </a>
+    </div>
+  </div>
+
+  <div class="website-hero-3__background">
+    <img src="{{ image_url }}" alt="Background image" class="website-hero-3__background-image">
+  </div>
+</section>
