@@ -1,3 +1,7 @@
+{% set arrow_bottom_desktop = "https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-bottom-desktop.svg" %}
+{% set arrow_top_desktop = "https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-top-desktop.svg" %}
+{% set arrow_side_mobile = "https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-side-mobile.svg" %}
+
 <section class="website-fancy-steps">
   <div class="website-fancy-steps__wrapper">
     <h2 class="website-fancy-steps__heading">{{ module.heading }}</h2>
@@ -5,7 +9,12 @@
     <ul class="website-fancy-steps__steps">
      {% for step in module.steps %}
         <li class="step">
-            <span class="step__index">{{ loop.index }}</span> {{ step }}
+          <img src={{ arrow_bottom_desktop }} alt="Arrow pointing to new step">
+
+          <div class="step-box">
+            <div class="step-box__number">{{ loop.index }}</div>
+            <p class="step-box__text">{{ step }}</p>
+          </div>
         </li>
     {% endfor %}
     </ul>

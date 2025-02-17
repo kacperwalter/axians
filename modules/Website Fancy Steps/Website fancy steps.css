@@ -16,4 +16,23 @@
     padding-left: 3rem;
     padding-right: 3rem;
   }
+}
+.website-fancy-steps__steps {
+  list-style-type: none;
+}
+.website-fancy-steps .step .step-box {
+  max-width: 26rem;
+  border: 1.5px solid var(--color-brand);
+  border-radius: 8px;
+  position: relative;
+}
+.website-fancy-steps .step .step-box__number {
+  position: absolute;
+  top: -5rem;
+  display: grid;
+  place-content: center;
+  font-size: 6rem;
+  color: var(--color-brand-light);
+  border: 1.5px solid var(--color-brand);
+  border-radius: 8px;
 }/*# sourceMappingURL=Website fancy steps.css.map */
