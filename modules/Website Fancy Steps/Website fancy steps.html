@@ -1,6 +1,5 @@
-{% set arrow_bottom_desktop = "https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-bottom-desktop.svg" %}
-{% set arrow_top_desktop = "https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-top-desktop.svg" %}
-{% set arrow_side_mobile = "https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-side-mobile.svg" %}
+{% set arrow_desktop = "https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-top-desktop.svg" %}
+{% set arrow_mobile = "https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-side-mobile.svg" %}
 
 <section class="website-fancy-steps">
   <div class="website-fancy-steps__wrapper">
@@ -8,8 +7,10 @@
 
     <ul class="website-fancy-steps__steps">
      {% for step in module.steps %}
-      <li class="step">
-        <img src={{ arrow_bottom_desktop }} alt="Arrow pointing to new step">
+      <li class="step {{ loop.index is odd ? 'step--reverse' : '' }}">
+        {% if not loop.last %}  
+          <img class="step__arrow" src={{ arrow_desktop }} alt="Arrow pointing to new step">
+        {% endif %}
 
         <div class="step-box">
           <div class="step-box__number">{{ loop.index }}</div>
