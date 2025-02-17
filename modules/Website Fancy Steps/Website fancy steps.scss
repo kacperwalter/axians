@@ -1,6 +1,7 @@
 .website-fancy-steps {
   display: grid;
   place-content: center;
+  background-color: var(--color-gray);
 
   &__wrapper {
     max-width: 110rem;
@@ -23,17 +24,31 @@
   .step {
     .step-box {
       max-width: 26rem;
-      border: 1.5px solid var(--color-brand);
-      border-radius: 8px;
       position: relative;
 
       &__number {
         position: absolute;
-        top: -5rem;
+        top: -3.2rem;
+        left: 50%;
+        transform: translateX((-50%));
         display: grid;
         place-content: center;
         font-size: 6rem;
         color: var(--color-brand-light);
+        background-color: white;
+        border: 1.5px solid var(--color-brand);
+        border-radius: 8px;
+        width: 7.5rem;
+        height: 7.5rem;
+        aspect-ratio: 1 / 1;
+        font-weight: bold;
+      }
+
+      &__text {
+        text-align: center;
+        padding: 6rem 2.5rem 3.5rem 2.5rem;
+        font-size: 1.6rem;
+        background-color: white;
         border: 1.5px solid var(--color-brand);
         border-radius: 8px;
       }
