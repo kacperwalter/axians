@@ -2,6 +2,12 @@
   display: grid;
   place-content: center;
   background-color: var(--color-gray);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.website-fancy-steps__heading {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 .website-fancy-steps__wrapper {
   max-width: 110rem;
@@ -20,6 +26,8 @@
 }
 .website-fancy-steps__steps {
   list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 .website-fancy-steps .step .step-box {
   max-width: 26rem;

@@ -8,14 +8,14 @@
 
     <ul class="website-fancy-steps__steps">
      {% for step in module.steps %}
-        <li class="step">
-          <img src={{ arrow_bottom_desktop }} alt="Arrow pointing to new step">
+      <li class="step">
+        <img src={{ arrow_bottom_desktop }} alt="Arrow pointing to new step">
 
-          <div class="step-box">
-            <div class="step-box__number">{{ loop.index }}</div>
-            <p class="step-box__text">{{ step }}</p>
-          </div>
-        </li>
+        <div class="step-box">
+          <div class="step-box__number">{{ loop.index }}</div>
+          <p class="step-box__text">{{ step }}</p>
+        </div>
+      </li>
     {% endfor %}
     </ul>
   </div>
