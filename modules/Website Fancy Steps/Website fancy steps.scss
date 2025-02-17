@@ -8,6 +8,14 @@
   &__heading {
     text-align: center;
     margin-bottom: 9rem;
+
+    @media (max-width: 1023px) {
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 500px) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__wrapper {
@@ -29,6 +37,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem; /* Ensure spacing is consistent */
+
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 500px) {
+      gap: 4rem;
+    }
   }
 
   .step {
@@ -37,8 +53,14 @@
     flex-direction: column;
     align-items: center;
 
+    @media (max-width: 1023px) {
+      flex-direction: row;
+      gap: 2rem;
+    }
+
     &:last-child {
-      .step__arrow {
+      .step__arrow,
+      .step__arrow--mobile {
         opacity: 0;
       }
     }
@@ -59,8 +81,21 @@
       }
     }
 
+    &__arrow--mobile {
+      position: relative;
+      top: 50%;
+
+      @media (max-width: 500px) {
+        top: 70%;
+      }
+    }
+
     &--reverse {
       flex-direction: column-reverse;
+
+      @media (max-width: 1023px) {
+        flex-direction: row;
+      }
 
       .step__arrow {
         transform: scaleY(-1);
@@ -76,6 +111,10 @@
       flex-direction: column;
       align-items: center;
       flex-grow: 1; /* Ensures all step-boxes grow equally */
+
+      @media (max-width: 1023px) {
+        max-width: 100%;
+      }
 
       &__number {
         position: absolute;
@@ -93,12 +132,16 @@
         height: 7.5rem;
         aspect-ratio: 1 / 1;
         font-weight: bold;
+
+        @media (max-width: 1023px) {
+          left: 9%;
+        }
       }
 
       &__text {
         text-align: center;
         padding: 6rem 2.5rem 3.5rem 2.5rem;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         background-color: white;
         border: 1.5px solid var(--color-brand);
         border-radius: 8px;
@@ -107,6 +150,10 @@
         align-items: center;
         justify-content: center;
         max-height: 28rem;
+
+        @media (max-width: 1023px) {
+          text-align: left;
+        }
       }
     }
   }

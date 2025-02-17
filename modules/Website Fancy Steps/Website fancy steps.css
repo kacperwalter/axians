@@ -9,6 +9,16 @@
   text-align: center;
   margin-bottom: 9rem;
 }
+@media (max-width: 1023px) {
+  .website-fancy-steps__heading {
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  .website-fancy-steps__heading {
+    margin-bottom: 5rem;
+  }
+}
 .website-fancy-steps__wrapper {
   max-width: 110rem;
 }
@@ -30,13 +40,30 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem; /* Ensure spacing is consistent */
 }
+@media (max-width: 1023px) {
+  .website-fancy-steps__steps {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .website-fancy-steps__steps {
+    gap: 4rem;
+  }
+}
 .website-fancy-steps .step {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.website-fancy-steps .step:last-child .step__arrow {
+@media (max-width: 1023px) {
+  .website-fancy-steps .step {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+.website-fancy-steps .step:last-child .step__arrow,
+.website-fancy-steps .step:last-child .step__arrow--mobile {
   opacity: 0;
 }
 .website-fancy-steps .step__arrow {
@@ -54,8 +81,22 @@
     display: none;
   }
 }
+.website-fancy-steps .step__arrow--mobile {
+  position: relative;
+  top: 50%;
+}
+@media (max-width: 500px) {
+  .website-fancy-steps .step__arrow--mobile {
+    top: 70%;
+  }
+}
 .website-fancy-steps .step--reverse {
   flex-direction: column-reverse;
+}
+@media (max-width: 1023px) {
+  .website-fancy-steps .step--reverse {
+    flex-direction: row;
+  }
 }
 .website-fancy-steps .step--reverse .step__arrow {
   transform: scaleY(-1);
@@ -69,6 +110,11 @@
   flex-direction: column;
   align-items: center;
   flex-grow: 1; /* Ensures all step-boxes grow equally */
+}
+@media (max-width: 1023px) {
+  .website-fancy-steps .step .step-box {
+    max-width: 100%;
+  }
 }
 .website-fancy-steps .step .step-box__number {
   position: absolute;
@@ -87,10 +133,15 @@
   aspect-ratio: 1/1;
   font-weight: bold;
 }
+@media (max-width: 1023px) {
+  .website-fancy-steps .step .step-box__number {
+    left: 9%;
+  }
+}
 .website-fancy-steps .step .step-box__text {
   text-align: center;
   padding: 6rem 2.5rem 3.5rem 2.5rem;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   background-color: white;
   border: 1.5px solid var(--color-brand);
   border-radius: 8px;
@@ -99,4 +150,9 @@
   align-items: center;
   justify-content: center;
   max-height: 28rem;
+}
+@media (max-width: 1023px) {
+  .website-fancy-steps .step .step-box__text {
+    text-align: left;
+  }
 }/*# sourceMappingURL=Website fancy steps.css.map */
