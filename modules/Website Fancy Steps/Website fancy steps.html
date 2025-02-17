@@ -8,6 +8,8 @@
     <ul class="website-fancy-steps__steps">
      {% for step in module.steps %}
       <li class="step {{ loop.index is odd ? 'step--reverse' : '' }}">
+        <img class="step__arrow--mobile" src={{ arrow_mobile }} alt="Arrow pointing to new step">
+
         <img class="step__arrow" src={{ arrow_desktop }} alt="Arrow pointing to new step">
 
         <div class="step-box">

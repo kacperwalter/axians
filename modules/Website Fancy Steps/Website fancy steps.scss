@@ -43,10 +43,20 @@
       }
     }
 
-    .step__arrow {
+    &__arrow {
       position: relative;
       left: 30%;
       top: -4rem;
+
+      @media (max-width: 1023px) {
+        display: none;
+      }
+
+      &--mobile {
+        @media (min-width: 1024px) {
+          display: none;
+        }
+      }
     }
 
     &--reverse {

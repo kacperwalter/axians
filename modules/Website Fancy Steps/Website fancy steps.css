@@ -39,10 +39,20 @@
 .website-fancy-steps .step:last-child .step__arrow {
   opacity: 0;
 }
-.website-fancy-steps .step .step__arrow {
+.website-fancy-steps .step__arrow {
   position: relative;
   left: 30%;
   top: -4rem;
+}
+@media (max-width: 1023px) {
+  .website-fancy-steps .step__arrow {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .website-fancy-steps .step__arrow--mobile {
+    display: none;
+  }
 }
 .website-fancy-steps .step--reverse {
   flex-direction: column-reverse;
