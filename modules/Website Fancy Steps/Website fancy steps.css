@@ -1,0 +1,19 @@
+.website-fancy-steps {
+  display: grid;
+  place-content: center;
+}
+.website-fancy-steps__wrapper {
+  max-width: 110rem;
+}
+@media (max-width: 1024px) {
+  .website-fancy-steps__wrapper {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (max-width: 850px) {
+  .website-fancy-steps__wrapper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}/*# sourceMappingURL=Website fancy steps.css.map */

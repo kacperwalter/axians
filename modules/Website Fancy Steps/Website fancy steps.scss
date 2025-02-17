@@ -1,0 +1,18 @@
+.website-fancy-steps {
+  display: grid;
+  place-content: center;
+
+  &__wrapper {
+    max-width: 110rem;
+
+    @media (max-width: 1024px) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  
+    @media (max-width: 850px) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+}
