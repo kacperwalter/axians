@@ -37,7 +37,7 @@
 .website-fancy-steps__steps {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(var(--step-count, 4), 1fr);
   gap: 2rem; /* Ensure spacing is consistent */
 }
 @media (max-width: 1023px) {
@@ -141,7 +141,7 @@
 .website-fancy-steps .step .step-box__text {
   text-align: center;
   padding: 6rem 2.5rem 3.5rem 2.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   background-color: white;
   border: 1.5px solid var(--color-brand);
   border-radius: 8px;

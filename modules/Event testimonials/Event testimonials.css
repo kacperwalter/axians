@@ -2,7 +2,6 @@
   display: grid;
   place-content: center;
   background-color: var(--color-gray);
-  margin-bottom: 5rem;
 }
 .event-testimonials__wrapper {
   max-width: 110rem;

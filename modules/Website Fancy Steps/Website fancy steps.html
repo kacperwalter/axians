@@ -1,7 +1,8 @@
 {% set arrow_desktop = "https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-top-desktop.svg" %}
 {% set arrow_mobile = "https://it.axians-it.pl/hubfs/landing-pages-assets/arrow-side-mobile.svg" %}
+{% set step_count = module.steps|length %}
 
-<section class="website-fancy-steps">
+<section class="website-fancy-steps" style="--step-count: {{ step_count }};">
   <div class="website-fancy-steps__wrapper">
     <h2 class="website-fancy-steps__heading">{{ module.heading }}</h2>
 
