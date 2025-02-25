@@ -1,0 +1,227 @@
+/* HubSpot Module Styles */
+
+/* Section Container */
+.section_form_v2 {
+  height: 700px;
+  margin: 30px auto;
+}
+
+/* Form Section */
+.forms_v2_section {
+  background: linear-gradient(to right, #946AAB, #B53385);
+  height: 350px;
+  top: 3225px;
+  gap: 0;
+  padding: 30px 0;
+}
+
+/* Container for Form and Text */
+.forms_v2_container {
+  max-width: 1024px;
+  min-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* Text Container */
+.forms_v2_text_container {
+  flex-basis: 85%;
+  padding: 0 4%;
+}
+
+.forms_v2_title {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38.73px;
+  text-align: left;
+  color: white;
+  padding: 2% 0;
+}
+
+.forms_v2_text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: left;
+  color: white;
+}
+
+/* Form Styles */
+.forms_v2_form {
+  position: relative;
+  top: 20%;
+  left: 55%;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  min-width: 470px;
+  height: auto;
+}
+
+.forms_v2_form .form-columns-1,
+.forms_v2_form .form-columns-2 {
+  max-width: unset;
+}
+
+.forms_v2_form .input {
+  padding-left: 10%;
+}
+
+.forms_v2_form .input .inputs-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.forms_v2_form form input[type="text"],
+.forms_v2_form form input[type="email"],
+.forms_v2_form form input[type="tel"],
+.forms_v2_form form input[type="number"],
+textarea,
+select {
+  font-family: 'Inter', sans-serif;
+  padding: 10px;
+  color: #787878;
+  border: none;
+  border-bottom: 2px solid #E2E2E2;
+  font-weight: 400;
+  text-decoration: none;
+  background-color: white;
+  font-size: 12px;
+  border-radius: 0;
+  width: 70% !important;
+}
+
+.forms_v2_form .hs-error-msg {
+  padding: 0 60px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: red;
+}
+
+.forms_v2_form .no-list.hs-error-msgs.inputs-list {
+  transform: translateY(-10px);
+}
+
+.forms_v2_form .hs-dependent-field .no-list.hs-error-msgs.inputs-list {
+  transform: translateY(0);
+}
+
+.forms_v2_form form input[type="submit"],
+form .hs-button {
+  background-color: transparent;
+  color: #B53385;
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  border: 1.5px solid #B53385;
+  font-style: normal;
+  font-weight: bold;
+  border-radius: 0;
+  padding: 12px 30px;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.forms_v2_form form input[type="submit"]:hover,
+form .hs-button:hover {
+  cursor: pointer;
+  background-color: white !important;
+  color: #2F9CEB;
+}
+
+.forms_v2_form .hs-fieldtype-phonenumber .input,
+.forms_v2_form .hs-fieldtype-text .input {
+  margin-top: 14px;
+}
+
+.forms_v2_form .actions {
+  display: flex;
+  padding-left: 25px;
+  padding-bottom: 5%;
+}
+
+/* Legal Consent Styles */
+.legal-consent-container {
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  color: #787878;
+  width: 90%;
+}
+
+.legal-consent-container .hs-richtext {
+  padding: 0 0 0 30px;
+  width: 100%;
+}
+
+.legal-consent-container p {
+  font-size: 0.5rem;
+}
+
+.legal-consent-container .hs-richtext p {
+  font-size: 0.4rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .forms_v2_form form input[type="submit"],
+  form .hs-button {
+    background-color: transparent;
+    color: #B53385;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    border: 1.5px solid #B53385;
+    font-style: normal;
+    font-weight: bold;
+    border-radius: 0;
+    padding: 12px 30px;
+    width: 70%;
+    margin-top: 20px;
+    font-size: 10px;
+  }
+
+  .forms_v2_container {
+    min-width: 0;
+    display: block;
+    top: 50%;
+    left: 55%;
+  }
+
+  .forms_v2_form {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    flex-basis: 68%;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 85%;
+    min-width: 0;
+    height: auto;
+  }
+
+  .forms_v2_form .actions {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    padding-bottom: 5%;
+  }
+
+  .section_form_v2 {
+    position: relative;
+    height: 1200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .forms_v2_form form input[name="firstname"] {
+    margin-left: 26px;
+  }
+
+  .section_form_v2 form {
+    padding: 20px;
+  }
+
+  .forms_v2_form form input[name="lastname"] {
+    margin-left: -50px;
+    width: 60% !important;
+  }
+}

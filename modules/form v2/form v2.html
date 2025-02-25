@@ -1,0 +1,266 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+<style>
+.section_form_v2{
+  height: 700px;
+  margin:30px auto;
+}
+  
+.forms_v2_form .hs-error-msg {
+    padding:0 60px;
+    font-family:inter;
+    font-size:10px;
+  }
+
+.forms_v2_section{
+  background: linear-gradient(to right, #946AAB, #B53385); 
+  height: 350px;
+  top: 3225px;
+  gap: 0px;
+  padding:30px 0;
+}
+
+
+.forms_v2_container{
+  max-width:1024px;
+  min-width:1024px;
+  margin:0 auto;
+  display:flex;
+}
+
+.forms_v2_text_container{
+  flex-basis: 85%;
+  padding:0% 4%;
+}
+.forms_v2_title{
+  font-family: Inter;
+font-size: 32px;
+font-weight: 400;
+line-height: 38.73px;
+text-align: left;
+color:white;
+padding:2% 0;
+}
+
+.forms_v2_text{
+font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+line-height: 29px;
+text-align: left;
+color:white;
+}
+
+.forms_v2_form{
+  top:20%;
+  left:55%;
+  background-color:white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  min-width:470px;
+  height:auto;
+}
+
+.forms_v2_form .form-columns-1,
+.forms_v2_form .form-columns-2 {
+  max-width: unset;
+}
+
+
+.forms_v2_form .input{
+padding-left:10%;
+}
+.forms_v2_form .input .inputs-list{
+list-style-type: none; /* Usuwa punktory */
+  padding-left: 0;
+}
+
+
+.forms_v2_form form input[type='text'],
+.forms_v2_form form input[type='email'],
+.forms_v2_form form input[type='tel'],
+.forms_v2_form form input[type='number'],
+textarea,
+select {
+  font-family: Inter;
+  padding: 10px;
+  color: #787878;
+  border: none; /* Usunięcie wszystkich obramowań */
+  border-bottom: 2px solid #E2E2E2; /* Dodanie tylko dolnego obramowania */
+  font-weight: 400;
+  text-decoration: none;
+  background-color: white;
+  font-size: 12px;
+  border-radius: 0px;
+  width: 70% !important;
+}
+
+.forms_v2_form .hs-error-msg {
+  color: red;
+}
+
+.forms_v2_form .no-list.hs-error-msgs.inputs-list {
+  transform: translateY(-10px);
+}
+
+.forms_v2_form .hs-dependent-field .no-list.hs-error-msgs.inputs-list {
+  transform: translateY(0px);
+}
+
+
+.forms_v2_form form input[type='submit'], form .hs-button {
+  background-color: white !important;
+  color: #B53385;
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  border: 1.5px solid #B53385;
+  /* color: #274EA3; */
+  font-style: normal;
+  font-weight: bold;
+  background-color: transparent;
+  border-radius: 0px;
+  padding: 12px 30px;
+  width: 100%;
+  margin-top: 20px;
+  width: 50%;
+}
+
+.forms_v2_form form input[type='submit']:hover, form .hs-button:hover{
+  cursor: pointer;
+  background-color: white !important;
+  color: #2F9CEB;
+}
+
+
+
+.forms_v2_form .hs-fieldtype-phonenumber .input, 
+.forms_v2_form .hs-fieldtype-text .input {
+  margin-top: 14px;
+}
+
+.forms_v2_form .actions {
+  display: flex;
+  padding-left:0;
+  padding-bottom:5%;
+  padding-left:25px;
+}
+
+.legal-consent-container {
+  font-size: 12px;
+  font-family:Inter;
+  color: #787878;
+  width:90%;
+}
+
+.legal-consent-container .hs-richtext{
+    padding: 0 0px 0 30px;
+  width:100%;
+}
+.legal-consent-container p{
+    font-size: .5rem
+}
+
+.legal-consent-container .hs-richtext p{
+    font-size: .4rem
+}
+
+@media (max-width: 768px) {
+  
+  .forms_v2_form form input[type='submit'], form .hs-button {
+  background-color: white !important;
+  color: #B53385;
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  border: 1.5px solid #B53385;
+  /* color: #274EA3; */
+  font-style: normal;
+  font-weight: bold;
+  background-color: transparent;
+  border-radius: 0px;
+  padding: 12px 30px;
+  width: 100%;
+  margin-top: 20px;
+  width: 70%;
+  font-size:10px;
+}
+  .forms_v2_container{
+    min-width:0;
+    display:block;
+      top:50%;
+      left:55%;
+  }
+
+  
+  .forms_v2_form{
+    position:absolute;
+  top:25%;
+  left:8%;
+  flex-basis: 68%;
+  background-color:white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width:85%;
+  min-width:0;
+  height:auto;
+}
+  
+.forms_v2_form .actions {
+  display: flex;
+  justify-content: center;
+  padding-left:0%;
+  padding-bottom:5%;
+}
+  .section_form_v2{
+    position:relative;
+    height: 1200px;
+}
+}
+@media (min-width: 768px) {
+.forms_v2_form form input[name="firstname"] {
+  margin-left: 26px;
+
+}
+.section_form_v2 form{
+  padding:20px;
+  }
+.forms_v2_form form input[name="lastname"] {
+  margin-left: -50px;
+ width:60% !important
+}
+}
+
+</style>
+  
+
+<section class="section_form_v2">
+
+<section class="forms_v2_section">
+    <div class="wrapper">
+<div class="forms_v2_container">
+
+ 
+    <div class="forms_v2_form">
+        {% form
+      form_to_use="{{ module.form.form_id }}"
+      response_response_type="{{ module.form.response_type }}"
+      response_message="{{ module.form.message }}"
+      response_redirect_id="{{ module.form.redirect_id }}"
+      response_redirect_url="{{module.form.redirect_url}}"
+      gotowebinar_webinar_key="{{ module.form.gotowebinar_webinar_key }}"
+    %}
+  </div>
+  
+    <div class="forms_v2_text_container">
+     <div class="forms_v2_title">
+      {{module.header}}
+  </div>
+  <div class="forms_v2_text">
+    {{module.text_field}}
+  </div>
+  </div>
+  </div>
+  
+  </div>
+</section>
+  
+  </section>
