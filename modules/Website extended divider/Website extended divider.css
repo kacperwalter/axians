@@ -63,7 +63,13 @@
   width: var(--row-width);
   background-color: white;
   color: #000349;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 2.5rem;
+}
+@media (max-width: 1024px) {
+  .website-extended-divider__row {
+    width: calc(var(--row-width) + 20%);
+    max-width: 100%;
+  }
 }
 .website-extended-divider__row-content {
   font-size: 2rem;
@@ -82,7 +88,6 @@
 .website-extended-divider__element1 {
   position: absolute;
   top: 0;
-  left: -2.5rem;
   z-index: 9;
 }
 @media (max-width: 1919px) {

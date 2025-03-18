@@ -61,7 +61,12 @@
     width: var(--row-width);
     background-color: white;
     color: #000349;
-    padding: 1.5rem 2.5rem;
+    padding: 1rem 2.5rem;
+
+    @media (max-width: 1024px) {
+      width: calc(var(--row-width) + 20%);
+      max-width: 100%;
+    }
 
     &-content {
       font-size: 2rem;
@@ -85,7 +90,6 @@
   &__element1 {
     position: absolute;
     top: 0;
-    left: -2.5rem;
     z-index: 9;
 
     
