@@ -1,34 +1,43 @@
-const targetSelector = '.submitted-message';
-
-const observerCallback = (mutationsList, observer) => {
-    for (const mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            const targetElement = document.querySelector(targetSelector);
-
-            if (targetElement) {
-                const headingToRemove = document.querySelector("[data-form-heading]");
-                const elementToOffset = document.querySelector("[data-event-partner]");
-                const eventForm = document.querySelector(".event-form__form");
-
-                if (headingToRemove) {
-                    headingToRemove.remove();
-                }
-
-                if (elementToOffset) {
-                    elementToOffset.style.marginTop = "10rem";
-                }
-                
-                if (eventForm) {
-                    eventForm.style.backgroundColor = "transparent";
-                    eventForm.style.boxShadow = "none";
-                }
-
-                observer.disconnect();
-                break;
-            }
-        }
+class EventFormModule {
+    constructor(container) {
+      this.container = container;
+      this.init();
     }
-};
+  
+    init() {
+      this.observer = new MutationObserver(this.observerCallback.bind(this));
+      this.observer.observe(this.container, { childList: true, subtree: true });
+    }
+  
+    observerCallback(mutations) {
+      for (const mutation of mutations) {
+        if (mutation.type === 'childList') {
+          const submittedMessage = this.container.querySelector('.submitted-message');
+          if (submittedMessage) {
+            const headingToRemove = this.container.querySelector('[data-form-heading]');
+            if (headingToRemove) {
+              headingToRemove.remove();
+            }
 
-const observer = new MutationObserver(observerCallback);
-observer.observe(document.body, { childList: true, subtree: true });
+            const elementToOffset = this.container.querySelector('[data-event-partner]');
+            if (elementToOffset) {
+              elementToOffset.style.marginTop = '10rem';
+            }
+            const eventForm = this.container.querySelector('.event-form__form');
+            if (eventForm) {
+              eventForm.style.backgroundColor = 'transparent';
+              eventForm.style.boxShadow = 'none';
+            }
+  
+            this.observer.disconnect();
+            break;
+          }
+        }
+      }
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const containers = document.querySelectorAll('.event-form');
+    containers.forEach((container) => new EventFormModule(container));
+  });
