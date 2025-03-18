@@ -6,6 +6,11 @@
   background-color: var(--color-blue);
   overflow: hidden;
 }
+@media (min-width: 2150px) {
+  .website-extended-divider {
+    background: linear-gradient(83deg, #045cb6 4.35%, #092755 97.23%);
+  }
+}
 @media (min-width: 500px) {
   .website-extended-divider {
     height: 40.7rem;
@@ -68,6 +73,11 @@
 .website-extended-divider__row-content span {
   font-size: 2.6rem;
   margin-right: 1rem;
+}
+@media (min-width: 2150px) {
+  .website-extended-divider__element1, .website-extended-divider__element2 {
+    display: none;
+  }
 }
 .website-extended-divider__element1 {
   position: absolute;

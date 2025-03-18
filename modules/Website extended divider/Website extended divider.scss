@@ -6,6 +6,10 @@
   background-color: var(--color-blue);
   overflow: hidden; 
 
+  @media (min-width: 2150px) {
+    background: linear-gradient(83deg,#045cb6 4.35%,#092755 97.23%);
+  }
+
   @media (min-width: 500px) {
     height: 40.7rem;
   }
@@ -68,6 +72,13 @@
         font-size: 2.6rem;
         margin-right: 1rem;
       }
+    }
+  }
+
+  &__element1, 
+  &__element2 {
+    @media (min-width: 2150px) {
+      display: none;
     }
   }
 
