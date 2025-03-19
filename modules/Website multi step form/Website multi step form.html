@@ -1,6 +1,30 @@
-<section class="website-multi-step-form">
-  {# TODO Ten embed niech przychodzi z CMSa #}
-  <script src="https://js-eu1.hsforms.net/forms/embed/143724670.js" defer></script>
-  <div class="hs-form-frame" data-region="eu1" data-form-id="a46646fa-ee3b-4e36-80f7-961fe75fc2a1" data-portal-id="143724670"></div>
-  {# TODO #}
+<section class="website-multi-step-form" id="multistep-form">
+  <div class="website-multi-step-form__wrapper">
+    <div class="website-multi-step-form__content">
+      <h2 class="website-multi-step-form__heading">{{ module.heading }}</h2>
+  
+      {% if module.is_list %}
+        <ul class="website-multi-step-form__elements">
+          {% for element in module.elements %}
+            <li class="website-multi-step-form__element">{{ element }}</li>
+          {% endfor %}
+        </ul>
+
+        {% else %}
+
+        <div class="website-multi-step-form__caption">
+          {{ module.caption }}
+        </div>
+      {% endif %}
+    </div>
+  
+    <div class="website-multi-step-form__form">
+        {# TODO Ten embed niech przychodzi z CMSa #}
+        <script src="https://js-eu1.hsforms.net/forms/embed/143724670.js" defer></script>
+        <div class="hs-form-frame" data-region="eu1" data-form-id="a46646fa-ee3b-4e36-80f7-961fe75fc2a1" data-portal-id="143724670"></div>
+        {# TODO #} 
+    </div>
+  </div>
+
+  <div class="website-multi-step-form__background"></div>
 </section>
