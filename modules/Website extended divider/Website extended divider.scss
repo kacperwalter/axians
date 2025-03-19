@@ -87,6 +87,7 @@
   &__element1, 
   &__element2 {
     pointer-events: none;
+    height: 120%;
 
     @media (min-width: 2150px) {
       display: none;
@@ -99,8 +100,8 @@
     z-index: 9;
 
     
-    @media (max-width: 1919px) {
-      left: -13rem;
+    @media (max-width: 2149px) {
+      left: -40rem;
     }
 
     @media (max-width: 1600px) {
@@ -108,11 +109,11 @@
     }
 
     @media (max-width: 1350px) {
-      left: -42rem;
+      left: -73rem;
     }
 
     @media (max-width: 1024px) {
-      left: -54rem;
+      left: -81rem;
     }
 
     @media (max-width: 500px) {
@@ -126,8 +127,8 @@
     left: 96rem;
     z-index: 9;
 
-    @media (max-width: 1919px) {
-      left: 86rem;
+    @media (max-width: 2149px) {
+      left: 77rem;
     }
 
     @media (max-width: 1600px) {
@@ -135,16 +136,13 @@
     }
 
     @media (max-width: 1350px) {
-      left: 57rem;
+      left: 45rem;
     }
 
     @media (max-width: 1024px) {
-      left: 43rem;
+      left: 36rem;
     }
 
-    @media (min-width: 1920px) {
-      left: 96rem;
-    }
     
     @media (max-width: 500px) {
       display: none;
