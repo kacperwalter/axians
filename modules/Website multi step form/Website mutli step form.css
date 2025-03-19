@@ -9,6 +9,11 @@
   margin: 0;
   margin-bottom: -15px;
 }
+@media (max-width: 769px) {
+  .website-multi-step-form__heading {
+    text-align: center;
+  }
+}
 .website-multi-step-form__wrapper {
   max-width: 110rem;
   display: grid;
@@ -55,6 +60,7 @@
 @media (max-width: 769px) {
   .website-multi-step-form__caption {
     text-align: center;
+    margin-bottom: 3rem;
   }
 }
 .website-multi-step-form__element {
