@@ -1,6 +1,5 @@
 .website-extended-divider {
   display: grid;
-  place-content: center;
   margin-bottom: 10rem;
   position: relative;
   background-color: var(--color-blue);
@@ -23,6 +22,7 @@
   }
 }
 .website-extended-divider__wrapper {
+  margin: 0 auto;
   z-index: 10;
   width: 100%;
   max-width: 110rem;
@@ -47,6 +47,11 @@
 }
 .website-extended-divider__heading {
   color: white;
+}
+@media (min-width: 1024px) {
+  .website-extended-divider__heading {
+    max-width: 30rem;
+  }
 }
 @media (max-width: 500px) {
   .website-extended-divider__heading {
@@ -79,6 +84,9 @@
 .website-extended-divider__row-content span {
   font-size: 2.6rem;
   margin-right: 1rem;
+}
+.website-extended-divider__element1, .website-extended-divider__element2 {
+  pointer-events: none;
 }
 @media (min-width: 2150px) {
   .website-extended-divider__element1, .website-extended-divider__element2 {
