@@ -63,6 +63,18 @@
     margin-bottom: 3rem;
   }
 }
+.website-multi-step-form__logo {
+  max-width: 100%;
+}
+.website-multi-step-form__logo-heading {
+  margin-top: 1rem;
+  font-size: 2.3rem;
+}
+@media (max-width: 850px) {
+  .website-multi-step-form__logo-heading {
+    text-align: center;
+  }
+}
 .website-multi-step-form__element {
   font-size: 2rem;
   list-style-type: none;
