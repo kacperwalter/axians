@@ -48,6 +48,11 @@
     padding-top: 8rem;
   }
 }
+@media (max-width: 850px) {
+  .website-multi-step-form__content {
+    display: grid;
+  }
+}
 @media (max-width: 769px) {
   .website-multi-step-form__elements {
     margin-bottom: 3rem;
@@ -64,15 +69,24 @@
   }
 }
 .website-multi-step-form__logo {
-  max-width: 100%;
+  margin-top: 2rem;
+  max-width: 10rem;
+}
+@media (max-width: 850px) {
+  .website-multi-step-form__logo {
+    place-self: center;
+    margin-top: 0;
+  }
 }
 .website-multi-step-form__logo-heading {
   margin-top: 1rem;
-  font-size: 2.3rem;
+  font-size: 1.8rem;
+  color: white;
 }
 @media (max-width: 850px) {
   .website-multi-step-form__logo-heading {
     text-align: center;
+    margin-bottom: 1rem;
   }
 }
 .website-multi-step-form__element {

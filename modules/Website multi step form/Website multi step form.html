@@ -5,9 +5,7 @@
 <section class="website-multi-step-form" id="multistep-form">
   <div class="website-multi-step-form__wrapper">
     <div class="website-multi-step-form__content">
-    {% if !module.display_logo %}
       <h2 class="website-multi-step-form__heading">{{ module.heading }}</h2>
-    {% endif %}
     
       {% if module.is_list %}
         <ul class="website-multi-step-form__elements">
@@ -15,9 +13,8 @@
             <li class="website-multi-step-form__element">{{ element }}</li>
           {% endfor %}
         </ul>
-        {% endif %}
 
-      {% if !module.is_list and !module.display_logo %}
+        {% else %}
         <div class="website-multi-step-form__caption">
           {{ module.caption }}
         </div>
@@ -26,9 +23,9 @@
       {% if module.display_logo %}
         <img src="{{ module.logo.logo.src }}" alt="" class="website-multi-step-form__logo">
 
-        <h2 class="website-multi-step-form__logo-heading">
+        <p class="website-multi-step-form__logo-heading">
           {{ module.logo.caption }}
-        </h2>
+        </p>
       {% endif %}
     </div>
   
