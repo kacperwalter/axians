@@ -1,0 +1,17 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Custom Landing Page
+  screenshotPath: ../images/template-previews/custom-landing.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block head %}
+ <link rel="stylesheet" href="{{ get_asset_url('../styles/basic-landing-page-template.css') }}">
+ <link rel="stylesheet" href="{{ get_asset_url('../styles/button.css') }}">
+{% endblock %}
+
+{% block body %}
+  {% dnd_area "main_content" label="Main Content Area" %}
+  {% end_dnd_area %}
+{% endblock %}

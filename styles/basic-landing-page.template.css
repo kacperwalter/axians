@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Vinci Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//it.axians-it.pl/hubfs/landing-pages-assets/fonts/Vinci%20Sans%20Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Vinci Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//it.axians-it.pl/hubfs/landing-pages-assets/fonts/Vinci%20Sans%20Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Vinci Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("//it.axians-it.pl/hubfs/landing-pages-assets/fonts/Vinci%20Sans%20Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Vinci Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//it.axians-it.pl/hubfs/landing-pages-assets/fonts/Vinci%20Sans%20Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Vinci Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("//it.axians-it.pl/hubfs/landing-pages-assets/fonts/Vinci%20Sans%20Italic.otf") format("opentype");
+}
+:root {
+  --color-gray: #F7F7F7;
+  --color-brand: #A20067;
+  --color-brand-light: #E0AFCB;
+  --color-blue: #1354A9;
+  --color-paragraph: #4F4F4F;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body, p {
+  font-size: 1.6rem;
+  font-family: "Vinci Sans", sans-serif;
+  margin: 0;
+  color: var(--color-paragraph);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Vinci Sans", sans-serif;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+/* Example of using different font weights */
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+.overlay-content p {
+  color: white;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+[data-progress-bar-current],
+[data-progress-bar-all] {
+  font-weight: bold;
+}
+
+[data-progress-bar-current] {
+  color: var(--color-brand);
+}
+
+[data-progress-bar-all] {
+  color: var(--color-brand-light);
+}
+
+.progress-bar__bar {
+  position: relative;
+  width: 150px; /* adjust as needed */
+  height: 4px; /* adjust as needed */
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar__line-bg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-brand-light);
+  border-radius: 2px;
+}
+
+.progress-bar__line-filled {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  background-color: var(--color-brand);
+  width: 0%;
+  border-radius: 2px;
+  transition: width 0.4s ease-in-out;
+}
+
+.progress-bar__dot {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  transition: left 0.4s ease-in-out;
+  width: 12px; /* adjust if needed */
+  height: 12px; /* adjust if needed */
+}/*# sourceMappingURL=global.css.map */
